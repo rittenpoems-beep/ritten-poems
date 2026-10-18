@@ -1,0 +1,18 @@
+# Qoder Sites 本地描述文件，含项目与发布标识，不进入公开仓库
+*.qoder.site
+
+# 上游字体源文件（体积大，且可重新下载）；网页用的子集产物在 web/assets/fonts/
+font-build/*.otf
+font-build/*.ttf
+
+# 本地生成的部署副本，源文件以 web/ 为准
+dist/
+
+# 旧版站点备份，仅保留在本地
+web-v1-archive/
+
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log

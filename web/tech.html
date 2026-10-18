@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>技术与研究 · 藤氏蓝</title>
+<meta name="description" content="藤氏蓝的技术实践：Varve AI Agent 跨会话记忆系统、AI 视频自动化生产工作流，以及对 Agent 框架、Context Engineering、模型路由与 AI 原生开发的持续研究。">
+<meta name="theme-color" content="#f3efe6">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/site.css">
+<script>document.documentElement.className += " js";</script>
+<script src="js/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<div class="progress" data-progress aria-hidden="true"></div>
+
+<header class="site-head" data-head>
+  <div class="site-head__in">
+    <a class="wordmark" href="index.html" aria-label="藤氏蓝 · Ritten Poems 首页">
+      <svg class="wordmark__mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" fill="#151310"/><rect x="12" y="19" width="40" height="4" fill="#f3efe6"/><rect x="12" y="29" width="30" height="4" fill="#c4785f"/><rect x="12" y="39" width="20" height="4" fill="#c4785f"/><circle cx="48" cy="45" r="5" fill="#a4432f"/></svg>
+      <span class="wordmark__txt"><span class="wordmark__cn">藤氏蓝</span><span class="wordmark__en">Ritten Poems</span></span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a href="teach.html"><i>01</i>教育</a>
+      <a href="works.html"><i>02</i>作品</a>
+      <a href="tech.html" aria-current="page"><i>03</i>技术</a>
+      <a href="notes.html"><i>04</i>手记</a>
+      <a href="contact.html"><i>05</i>联系</a>
+    </nav>
+    <a class="head-cta" href="contact.html#free">预约半小时 <span class="arw">↗</span></a>
+    <button class="nav__toggle" data-nav-toggle aria-expanded="false" aria-controls="mobile-menu"><span></span><span class="nav__toggle-label">目录</span></button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <nav aria-label="移动端导航">
+    <a class="mm-link" href="teach.html"><i>01</i>教育与服务</a>
+    <a class="mm-link" href="works.html"><i>02</i>内容与作品</a>
+    <a class="mm-link" href="tech.html"><i>03</i>技术与研究</a>
+    <a class="mm-link" href="notes.html"><i>04</i>思考与手记</a>
+    <a class="mm-link" href="contact.html"><i>05</i>联系</a>
+  </nav>
+  <div class="mobile-menu__foot mono">
+    <span>Chongqing, CN</span>
+    <a href="contact.html#free">预约免费讲解 ↗</a>
+  </div>
+</div>
+
+<main id="main">
+
+  <section class="page-hero">
+    <span class="page-hero__ghost" aria-hidden="true">技</span>
+    <span class="page-hero__stamp" aria-hidden="true">03</span>
+    <div class="shell page-hero__in">
+      <div class="page-hero__meta mono"><span>03 / Technology &amp; Research</span><span>Varve · Workflow · Research</span></div>
+      <h1>不是听来的，<br>是自己<span class="hl">趟</span>出来的。</h1>
+      <p class="page-hero__lead">我不是资深程序员，这个网站也不是一个 GitHub 作品集。但我讲的每一个机制，背后都有我真实动手过的系统——它们是我在课堂和镜头前敢把话说清楚的依据。</p>
+    </div>
+  </section>
+
+  <!-- Varve -->
+  <section class="section" id="varve">
+    <div class="shell">
+      <div class="chapter">
+        <div class="chapter__idx"><b>01</b>Varve / 记忆系统</div>
+        <div class="chapter__main">
+          <h2>会话结束之后，<br>它还记得。</h2>
+          <p class="chapter__note">Varve 是一个 AI Agent 的跨会话记忆系统。我独立主导设计，借助 AI 编程工具实现并开源：Python + SQLite FTS5 + PowerShell，MIT 许可，仍在持续迭代。</p>
+        </div>
+        <div class="chapter__link"><a class="txtlink" href="https://github.com/rittenpoems-beep/varve" target="_blank" rel="noopener">GitHub 仓库 <span class="arw">↗</span></a></div>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><b>4,539</b><span>会话请求<br>630 轮对话 · 23,988 条轨迹记录</span></div>
+        <div class="stat"><b>≈14亿</b><span>累计输入 token</span></div>
+        <div class="stat"><b>96%</b><span>Prompt 缓存命中率<br>尾部追加注入的直接收益</span></div>
+        <div class="stat"><b>97.6 MB</b><span>本地 SQLite 库<br>可随时重建</span></div>
+      </div>
+      <p class="meta" style="margin:-.6rem 0 2.2rem">以上不是示意数据：它来自我在自己的开发环境里连续使用的真实量级，索引规模、库大小与审计结果仍随使用增长。代码与最新状态见 <a href="https://github.com/rittenpoems-beep/varve" target="_blank" rel="noopener" style="color:var(--seal-deep)">rittenpoems-beep/varve</a>。</p>
+
+      <div class="split split--wide">
+        <div class="prose" data-reveal>
+          <p>AI 编码助手最消耗人的地方，不是它不会写代码，而是它不记得。会话一结束，之前建立的环境认知、项目状态、做过哪些判断全部丢失；下一次要么重新解释一遍，要么把大段历史重新塞进上下文——既贵又慢，还容易塞进无关内容干扰判断。而当你想回头查“这个决定是在哪一步做出的”，历史信息又很难定位。</p>
+          <p>Varve 把 Agent 需要记住的东西分成三层，各管各的事，各自用不同的方式存取。环境层记录外部世界的稳定事实，状态层记录当前正在进行的局面，历史层保留发生过的对话和工具轨迹，可以按需检索回来。</p>
+          <p>名字来自地质学里的<b>纹泥沉积</b>：一年一层，不断累积，可以回溯，旧的层不会被抹掉。</p>
+          <p class="meta" style="color:var(--seal);margin-top:1.6rem">项目原则：只追加 · 可重建 · 可定位</p>
+        </div>
+        <div data-reveal>
+          <p class="meta" style="margin-bottom:.9rem">关键实现</p>
+          <ul class="ticks">
+            <li>环境 / 状态 / 历史三层记忆结构</li>
+            <li>只注入最新一条状态快照，细节按需检索，不一次灌几十万 token</li>
+            <li>注入落在请求尾部，不碰固定前缀，因此不破坏 prompt 缓存</li>
+            <li>SQLite FTS5 全文索引 + 多变体检索，可回溯到原文行号</li>
+            <li>多会话并发写文件：staging 三段式——提案 → 裁决 → 原子提交</li>
+            <li>全局状态卡：任何目录共用一张，跨工作区、跨框架</li>
+            <li>零 LLM 调用、零第三方依赖（Python 标准库 + PowerShell 7）</li>
+            <li>索引层带审计与可执行回归用例</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="ink-panel" style="margin-top:clamp(2.6rem,5vw,4rem)">
+        <div class="ink-panel__in">
+          <p class="meta" style="margin-bottom:1.2rem">三层结构 · 简化示意</p>
+          <div class="varve-layers">
+            <div class="varve-layer"><b>环境 Environment</b><span>相对稳定的事实：项目结构、依赖、约定、外部系统。变化慢，检索成本低。</span></div>
+            <div class="varve-layer"><b>状态 State</b><span>当前局面：正在做什么、试过了什么、结论是什么。以尾部追加的方式注入。</span></div>
+            <div class="varve-layer"><b>历史 History</b><span>完整发生过的对话与工具轨迹，索引进 FTS5，需要时定位回来，不需要时不占上下文。</span></div>
+          </div>
+          <p style="font-size:.9rem;color:rgba(247,243,233,.6);max-width:44em;margin:1.5rem 0 0">这套划分带来的直接好处是：不用为了“让它想起来”而把整段历史重播一遍，也不必依赖额外的大模型调用来做记忆整理。</p>
+        </div>
+      </div>
+
+      <div class="split" style="margin-top:clamp(2.4rem,5vw,3.6rem)" data-reveal-group>
+        <div data-reveal>
+          <p class="meta" style="margin-bottom:.9rem">兼容性（以仓库 README 为准）</p>
+          <ul class="ticks">
+            <li><b>Codex</b>：已适配，且经过端到端实测</li>
+            <li><b>Claude Code</b>：已适配，脚本层验证通过；历史检索尚未接入</li>
+            <li>只能改写固定前缀来注入记忆的框架：<b>不支持</b></li>
+            <li>没有 hook 通道的框架：<b>不支持</b></li>
+          </ul>
+        </div>
+        <div data-reveal>
+          <p class="meta" style="margin-bottom:.9rem">我知道它还不好的地方</p>
+          <ul class="ticks">
+            <li>历史层依赖 <code>~/.codex/sessions/**/*.jsonl</code>，换了目录结构就得自己改</li>
+            <li>脚本按 Windows / PowerShell 7 优先写，其他环境没有同等验证</li>
+            <li>全局状态卡只有一张，不按项目隔离，多项目并行时会互相干扰</li>
+            <li>首次使用需要手动点一次信任全局 hooks</li>
+            <li>关键词检索是逐字匹配，换个说法就捞不到；语义索引还在权衡，当前“锚优先 + 覆盖自述”是权宜解法</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout" style="margin-top:2rem">
+        <p style="margin:0"><b>为什么要把限制写在官网上。</b>一个还没做完的东西，最容易的做法是只讲设计意图、不讲边界。但我在课上要对学生说“这里你可以这样判断”，那我就得先把自己项目的判断依据和失败面摊开。具体行为与最新版本请以 <a href="https://github.com/rittenpoems-beep/varve" target="_blank" rel="noopener">GitHub 仓库</a> 为准。</p>
+      </div>
+
+      <div class="split split--even" style="margin-top:2.4rem">
+        <div>
+          <h3 style="font-family:var(--serif);font-weight:600;font-size:1.15rem;margin-bottom:.5rem">为什么一个教育者要做记忆系统</h3>
+          <p style="font-size:.95rem;color:var(--ink-2);margin:0">因为“Agent 为什么会忘事、上下文为什么有成本”是我课上最难讲清的一块。只有真的把它当成工程问题解决过，我才敢在学生面前说：这里你可以这样判断。</p>
+        </div>
+        <div>
+          <h3 style="font-family:var(--serif);font-weight:600;font-size:1.15rem;margin-bottom:.5rem">这个项目说明了什么能力</h3>
+          <p style="font-size:.95rem;color:var(--ink-2);margin:0">对 Agent 记忆机制、系统结构、上下文管理和工程设计的实际理解；也包括一套不算轻松的工作方式——用 AI 编程工具实现，同时自己守住架构决策和验证标准。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 工作流 -->
+  <section class="section section--alt" id="workflow">
+    <div class="shell">
+      <div class="chapter">
+        <div class="chapter__idx"><b>02</b>Workflow / 工作流</div>
+        <div class="chapter__main">
+          <h2>把重复劳动<br>变成结构，<br>把时间留给判断。</h2>
+          <p class="chapter__note">我发布过不少 AI 科普视频，很快就撞上一个问题：真正耗时的不是“想清楚讲什么”，而是围绕它的大量重复操作。</p>
+        </div>
+      </div>
+      <div class="split split--wide">
+        <div class="prose" data-reveal>
+          <p>转写、校对、对齐时间轴、按内容切段、生成字幕、准备素材、编排画面、渲染合成——这些环节单个都不难，但它们叠在一起，就会把创作时间挤到只剩零头。</p>
+          <p>我的做法是把整个生产过程结构化，划成一段段可以独立处理的环节，然后让 Agent 和相关工具承担其中规则明确的部分。人保留的是最需要判断力的环节：讲什么、怎么讲、结果对不对。</p>
+          <p>这件事本身也是一个很好的教学案例。它不属于“用 AI 写点什么”，而是“用 AI 改造一条生产线”，需要工作流设计、媒体处理、时间轴精度和大量验证——这些恰好是讲给学习者听时最有用的部分：每一步都可能出错，也每一步都能检查。</p>
+          <div class="callout callout--seal">部分环节已经在真实内容制作中测试使用，但它不是一个成熟的商业软件产品。我不把它包装成产品，也不宣称已经全流程自动化。</div>
+        </div>
+        <div data-reveal>
+          <p class="meta" style="margin-bottom:1rem">生产环节</p>
+          <ul class="ticks">
+            <li>视频脚本处理</li>
+            <li>ASR 语音识别</li>
+            <li>字幕与词级时间轴</li>
+            <li>内容结构化分析</li>
+            <li>视觉信息规划</li>
+            <li>Motion Design</li>
+            <li>画面与动画编排</li>
+            <li>FFmpeg 媒体处理</li>
+            <li>音频与 BGM</li>
+            <li>视频渲染与自动化处理</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 研究方向 -->
+  <section class="section" id="research">
+    <div class="shell">
+      <div class="chapter">
+        <div class="chapter__idx"><b>03</b>Research / 研究</div>
+        <div class="chapter__main">
+          <h2>持续在研究的<br>那些问题。</h2>
+          <p class="chapter__note">这些不是技能标签。每一项我都希望自己能说清楚它解决了什么问题、代价在哪里，以及在什么情况下不该用它。</p>
+        </div>
+      </div>
+      <div class="split split--wide">
+        <div data-reveal>
+          <ul class="chips">
+            <li>Agent Framework</li>
+            <li>多 Agent 协作</li>
+            <li>模型能力边界</li>
+            <li>语义决策与模型路由</li>
+            <li>AI 工具调用</li>
+            <li>Context Engineering</li>
+            <li>本地模型应用</li>
+            <li>AI 视频生成</li>
+            <li>计算机自动化</li>
+            <li>AI Native 软件开发</li>
+          </ul>
+        </div>
+        <div class="prose" data-reveal>
+          <h4>用过的工具，和从它们身上学到的</h4>
+          <p>Claude Code、Codex、DeepSeek 相关的 Agent 系统、ComfyUI 是我长期使用的几类工具。它们给我的不是“会操作某软件”，而是几个反复出现的认识：上下文是有限资源，工具描述质量直接决定 Agent 上限，自动化最难的部分是验证而不是执行，以及不同模型在同一任务上的差异远比榜单上显示的更大。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 学习路径 -->
+  <section class="section section--alt" id="path">
+    <div class="shell">
+      <div class="chapter">
+        <div class="chapter__idx"><b>04</b>Path / 路径</div>
+        <div class="chapter__main">
+          <h2>我的技术学习<br>是怎么发生的。</h2>
+          <p class="chapter__note">我的专业是数据科学与大数据技术，目前还在本科阶段。但我不是沿着传统程序员的培养路径成长起来的。</p>
+        </div>
+      </div>
+      <div class="split">
+        <div class="prose" data-reveal>
+          <p>我的学习主要来自实际问题、自主研究、读技术文档、做项目实验，以及与 AI 编程工具协作。</p>
+          <p>这种路径有一个明显好处——我是真的靠 AI 把不会的东西变成能用的能力，所以我非常清楚它在哪里帮得上、在哪里会把你带沟里去。这也是我教学时最有说服力的部分，因为我的卡点和学习者的卡点几乎一模一样。</p>
+          <p>我也并不认为传统计算机知识因此变得不重要。恰恰相反：当执行变得便宜，问题理解、架构设计、判断力和结果验证的要求被放大了。工具不会替你承担这些。</p>
+        </div>
+        <div data-reveal>
+          <p class="meta" style="margin-bottom:.9rem">事实清单</p>
+          <div class="channels">
+            <div class="channel"><span class="meta">专业</span><span>数据科学与大数据技术，本科在读</span></div>
+            <div class="channel"><span class="meta">学校</span><span>重庆工商大学</span></div>
+            <div class="channel"><span class="meta">开源</span><span>Varve（MIT 许可）</span></div>
+            <div class="channel"><span class="meta">角色</span><span>独立研究、教学与内容创作</span></div>
+            <div class="channel"><span class="meta">不虚构</span><span>本站没有公司任职履历、学员评价或机构合作案例</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="shell cta-band__in">
+      <div>
+        <p class="mono">Start here / 技术</p>
+        <h2>想聊技术，<br>或想把它<em>学会</em>。</h2>
+      </div>
+      <div class="cta-band__side">
+        <p>如果你在做 Agent 应用、卡在上下文或记忆问题上，或者想把这类工程能力真正学会，可以从一次半小时的免费讲解开始。</p>
+        <a class="btn btn--light" href="contact.html#free">约一次半小时讲解 <span class="arw">→</span></a>
+        <p class="cta-band__fine">不收费、不推销，也不会有人追着让你报名。</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="shell">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a class="footer__mark" href="index.html">藤氏蓝<span>Ritten Poems</span></a>
+        <p>理解 AI，使用 AI，再借 Agent 把想法做成真实的东西。中国重庆，线上为主。</p>
+      </div>
+      <div>
+        <h4>站点</h4>
+        <ul>
+          <li><a href="teach.html">教育与服务</a></li>
+          <li><a href="works.html">内容与作品</a></li>
+          <li><a href="tech.html">技术与研究</a></li>
+          <li><a href="notes.html">思考与手记</a></li>
+          <li><a href="contact.html">联系</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>本页</h4>
+        <ul>
+          <li><a href="#varve">Varve 记忆系统</a></li>
+          <li><a href="#workflow">视频工作流</a></li>
+          <li><a href="#research">研究方向</a></li>
+          <li><a href="#path">学习路径</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>外部</h4>
+        <ul>
+          <li><a href="https://github.com/rittenpoems-beep" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://github.com/rittenpoems-beep/varve" target="_blank" rel="noopener">Varve 仓库</a></li>
+          <li><a href="https://www.douyin.com/user/MS4wLjABAAAA21GorSYDQlH0wF6z7R6nnLK7dC2-dkVyIxDOVbX0vnaSavxGAOLrkOw1Rs21O1Dj" target="_blank" rel="noopener">抖音 · 藤氏蓝的AI教学</a></li>
+          <li><a href="https://space.bilibili.com/355780847" target="_blank" rel="noopener">哔哩哔哩</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__mega" aria-hidden="true">藤氏<span>蓝</span></div>
+    <div class="footer__fine">
+      <span>© <span data-year>2026</span> 藤氏蓝 · Ritten Poems</span>
+      <span>项目细节以仓库 README 为准；本页描述设计意图与当前状态，不夸大完成度。</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

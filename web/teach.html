@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>教育与服务 · 藤氏蓝</title>
+<meta name="description" content="藤氏蓝的 AI 教学：AI 基础与认知、AI 应用与开发、青少年 AI 认知课，以及《0计算机基础的Agent应用与开发入门》12 课与《从会用 Agent，到真正理解 Agent》九课全册。第一次沟通是半小时免费讲解。">
+<meta name="theme-color" content="#f3efe6">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/site.css">
+<script>document.documentElement.className += " js";</script>
+<script src="js/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<div class="progress" data-progress aria-hidden="true"></div>
+
+<header class="site-head" data-head>
+  <div class="site-head__in">
+    <a class="wordmark" href="index.html" aria-label="藤氏蓝 · Ritten Poems 首页">
+      <svg class="wordmark__mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" fill="#151310"/><rect x="12" y="19" width="40" height="4" fill="#f3efe6"/><rect x="12" y="29" width="30" height="4" fill="#c4785f"/><rect x="12" y="39" width="20" height="4" fill="#c4785f"/><circle cx="48" cy="45" r="5" fill="#a4432f"/></svg>
+      <span class="wordmark__txt"><span class="wordmark__cn">藤氏蓝</span><span class="wordmark__en">Ritten Poems</span></span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a href="teach.html" aria-current="page"><i>01</i>教育</a>
+      <a href="works.html"><i>02</i>作品</a>
+      <a href="tech.html"><i>03</i>技术</a>
+      <a href="notes.html"><i>04</i>手记</a>
+      <a href="contact.html"><i>05</i>联系</a>
+    </nav>
+    <a class="head-cta" href="contact.html#free">预约半小时 <span class="arw">↗</span></a>
+    <button class="nav__toggle" data-nav-toggle aria-expanded="false" aria-controls="mobile-menu"><span></span><span class="nav__toggle-label">目录</span></button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <nav aria-label="移动端导航">
+    <a class="mm-link" href="teach.html"><i>01</i>教育与服务</a>
+    <a class="mm-link" href="works.html"><i>02</i>内容与作品</a>
+    <a class="mm-link" href="tech.html"><i>03</i>技术与研究</a>
+    <a class="mm-link" href="notes.html"><i>04</i>思考与手记</a>
+    <a class="mm-link" href="contact.html"><i>05</i>联系</a>
+  </nav>
+  <div class="mobile-menu__foot mono">
+    <span>Chongqing, CN</span>
+    <a href="contact.html#free">预约免费讲解 ↗</a>
+  </div>
+</div>
+
+<main id="main">
+
+  <section class="page-hero">
+    <span class="page-hero__ghost" aria-hidden="true">教</span>
+    <span class="page-hero__stamp" aria-hidden="true">01</span>
+    <div class="shell page-hero__in">
+      <div class="page-hero__meta mono"><span>01 / Education &amp; Service</span><span>One-to-one · Courses · Groups</span></div>
+      <h1>把技术讲成<span class="hl">人话</span>，<br>再把人话变成能力。</h1>
+      <p class="page-hero__lead">我的教学围绕一个问题展开：学完之后，你能不能独立面对一个陌生的 AI 工具或任务，并知道该从哪里下手。第一次沟通是<b>半小时免费讲解</b>，不谈钱，先把情况和能做什么说清楚。</p>
+      <div class="page-hero__actions">
+        <a class="btn" href="contact.html#free">预约免费讲解 <span class="arw">→</span></a>
+        <a class="txtlink" href="#course">先看两门课的课序 <span class="arw">↘</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="philosophy">
+    <div class="shell">
+      <div class="chapter">
+        <div class="chapter__idx"><b>01</b>Philosophy / 理念</div>
+        <div class="chapter__main">
+          <h2>先建立理解，<br>再把它变成能力。</h2>
+          <p class="chapter__note">我不教快捷键式的“操作”，而是补一层很薄但很关键的计算机与工程基础，加上判断力：什么是合理的期待，怎么验证结果，出错时从哪里查起。</p>
+        </div>
+      </div>
+
+      <div class="split">
+        <div class="prose" data-reveal>
+          <p><b>通过必要的计算机与工程基础，建立对 AI 的真实理解，再借助 Agent 把理解转化为实践能力。</b></p>
+          <p>这句话拆开来看是两句话，各自反对一种流行做法。</p>
+          <p>第一，我不认为所有人都必须先成为传统程序员，才有资格用 AI 做出东西。今天的工具确实让很多事的门槛下降了，一个不懂前端的人也可以让 Agent 帮他把内部小工具做出来。</p>
+          <p>第二，我也不认同完全跳过基础、只靠提示词就能掌握复杂系统。如果你不知道文件系统和路径是怎么回事，Agent 报错时你连它在说什么都不知道；如果你不理解上下文有成本，你就永远解释不清为什么同一件事今天成、明天败。</p>
+          <p>所以我教的不是“操作”，而是一层很薄但很关键的基础，加上判断力：什么是合理的期待，怎么验证结果，出错时从哪里查起。这些能力不会因为模型换代而贬值。</p>
+        </div>
+        <div data-reveal>
+          <div class="callout callout--seal">
+            <p class="meta" style="color:var(--seal);margin-bottom:.6rem">教学从哪里来</p>
+            <p style="font-size:.93rem;margin:0 0 .8rem">我有小学、初中数学一对一家教的实际经验，熟悉基础教学场景，也和大量家长直接沟通过。我知道一个概念要换几种说法孩子才会真的点头，也知道家长真正关心的是什么。</p>
+            <p style="font-size:.93rem;margin:0">另一边，我持续在做 AI 科普短视频和开源项目。讲课用的每一个机制，基本都是我自己先踩过、再讲得出口的。</p>
+          </div>
+          <p class="meta" style="margin-top:1.8rem">上课形式</p>
+          <ul class="ticks" style="margin-top:.8rem">
+            <li>一对一辅导：成人 AI 认知、AI 应用、青少年认知课</li>
+            <li>系统课程：12 课主线逐课发布，在粉丝群里更新</li>
+            <li>小班与群体课程（正在设计中）</li>
+            <li>拿不准该走哪条线：先约一次半小时免费讲解</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="tracks">
+    <div class="shell">
+      <div class="chapter">
+        <div class="chapter__idx"><b>02</b>Tracks / 三条线</div>
+        <div class="chapter__main">
+          <h2>三种起点，<br>三种走法。</h2>
+          <p class="chapter__note">同一个人，三种不同的起点和目标。选最接近你情况的一条来看就够了；拿不准的话，半小时讲解就是用来做这件事的。</p>
+        </div>
+      </div>
+
+      <div class="offer">
+        <div class="offer__item is-open" data-panel id="track-1">
+          <button class="offer__btn" data-panel-btn aria-expanded="true" aria-controls="track-panel-1" type="button">
+            <span class="offer__idx">A</span>
+            <span class="offer__label">
+              <span class="offer__title">AI 基础与认知 · 从零理解人工智能</span>
+              <span class="offer__who">面向：非计算机背景的成年人、跨领域学习者、想搞清楚 AI 到底在做什么的人</span>
+            </span>
+            <span class="offer__sign" aria-hidden="true">+</span>
+          </button>
+          <div class="offer__panel" id="track-panel-1"><div><div class="offer__body">
+            <div class="prose">
+              <h4>你会得到什么</h4>
+              <p>一套能长期使用的解释框架：模型为什么会产生看似理解的语言、上下文到底装了什么、为什么同样的提问有时灵有时不灵、所谓“幻觉”从哪来、Chatbot 和 Agent 的根本差别在哪里。</p>
+              <p>我不希望你上完课只记得几个工具名字。判断力来自理解机制，而机制完全可以用日常语言讲清楚。</p>
+              <h4>大致会讲的内容</h4>
+              <ul class="ticks">
+                <li>人工智能的基本概念与发展</li>
+                <li>大语言模型是什么、如何工作</li>
+                <li>Chatbot、LLM 与 Agent 的区别</li>
+                <li>AI 的真实能力及局限</li>
+                <li>计算机、软件、数据、API 等必要基础</li>
+                <li>AI 工具如何与实际生活和工作连接</li>
+                <li>如何建立合理的 AI 使用习惯与判断能力</li>
+              </ul>
+            </div>
+            <div>
+              <p class="meta">常见起点</p>
+              <p style="font-size:.93rem;color:var(--ink-2)">“我天天在用 AI，但说不清它到底是什么。”</p>
+              <p class="meta">不适合</p>
+              <p style="font-size:.93rem;color:var(--ink-2)">已经想直接上手做 Agent 应用的人——请直接看 B 线。</p>
+              <p><span class="pill pill--live">可预约免费讲解</span> <a class="txtlink" style="margin-left:.6rem;font-size:.9rem" href="contact.html#free">约一次 <span class="arw">→</span></a></p>
+            </div>
+          </div></div></div>
+        </div>
+
+        <div class="offer__item" data-panel id="track-2">
+          <button class="offer__btn" data-panel-btn data-group="tracks" aria-expanded="false" aria-controls="track-panel-2" type="button">
+            <span class="offer__idx">B</span>
+            <span class="offer__label">
+              <span class="offer__title">AI 应用与开发 · 从聊天走向做东西</span>
+              <span class="offer__who">面向：能熟练使用电脑、希望走向 AI 应用、自动化和软件创造的人</span>
+            </span>
+            <span class="offer__sign" aria-hidden="true">+</span>
+          </button>
+          <div class="offer__panel" id="track-panel-2"><div><div class="offer__body">
+            <div class="prose">
+              <h4>你会得到什么</h4>
+              <p>从“我有一个想法”到“有一个能跑的东西”的完整路径，以及过程中必要的工程常识。这条线是我的差异化所在，因为它要求我自己在真实项目里趟过同样的坑。</p>
+              <p>我会带你实际做：让 Agent 读写文件、调用工具、执行一条自动化流水线、接入一个外部服务，并且在它失败的时候看懂发生了什么。</p>
+              <h4>大致会讲的内容</h4>
+              <ul class="ticks">
+                <li>Agent 的工作机制与执行循环</li>
+                <li>工具调用与任务执行</li>
+                <li>Agent 如何操作计算机和文件</li>
+                <li>工作流与自动化设计</li>
+                <li>AI 辅助编程；Codex、Claude Code 等 Agent 工具的使用</li>
+                <li>Context Engineering 与 AI 记忆</li>
+                <li>API 和外部服务集成</li>
+                <li>如何把需求拆解为可执行的技术方案</li>
+                <li>借助 Agent 制作小型应用或自动化工具</li>
+              </ul>
+            </div>
+            <div>
+              <p class="meta">常见起点</p>
+              <p style="font-size:.93rem;color:var(--ink-2)">“我提示词写得还行，但一遇到真问题就卡住。”</p>
+              <p class="meta">配套研究</p>
+              <p style="font-size:.93rem;color:var(--ink-2)">我的开源项目 <a href="tech.html#varve">Varve</a> 就是这条线上“记忆与上下文”问题的具体答案之一。</p>
+              <p><span class="pill pill--live">可预约免费讲解</span> <a class="txtlink" style="margin-left:.6rem;font-size:.9rem" href="contact.html#free">约一次 <span class="arw">→</span></a></p>
+            </div>
+          </div></div></div>
+        </div>
+
+        <div class="offer__item" data-panel id="track-3">
+          <button class="offer__btn" data-panel-btn data-group="tracks" aria-expanded="false" aria-controls="track-panel-3" type="button">
+            <span class="offer__idx">C</span>
+            <span class="offer__label">
+              <span class="offer__title">青少年 AI 认知课 · 五节课建立一整套认知</span>
+              <span class="offer__who">面向：小学三年级及以上的孩子，以及希望孩子有分寸地使用 AI 的家长</span>
+            </span>
+            <span class="offer__sign" aria-hidden="true">+</span>
+          </button>
+          <div class="offer__panel" id="track-panel-3"><div><div class="offer__body">
+            <div class="prose">
+              <h4>这门课是什么</h4>
+              <p>《AI 认知理解入门课》：一对一，5 节课，每节 60 分钟。它是认知理解课，不是编程课——不教写代码，也不承诺孩子学完能用 AI 做出多厉害的作品。要验收的是另一样东西：孩子能不能向家长讲清楚 AI 的回答是怎么来的、为什么它会一本正经地说错话、哪些环节必须由人来把关。</p>
+              <h4>五节课是一条链，不是五个话题</h4>
+              <ul class="ticks">
+                <li>认识人工智能：AI 是“从例子里学规律”的程序，和按固定规则办事的传统软件不一样</li>
+                <li>AI 为什么“会说话”：回答是根据上文逐词预测出来的，不是从数据库里查标准答案</li>
+                <li>AI 的边界：正因为靠预测生成，所以可能说得流畅却不真实，需要核实</li>
+                <li>AI 智能体（Agent）：给“大脑”配上工具、把任务拆开，它就能一步一步把事办完</li>
+                <li>综合小项目：孩子自选题目，走完“拆任务 → 提问 → 获取 → 核实 → 整理”，最后向家长做一次小汇报</li>
+              </ul>
+              <p>每一节课都在为下一节铺路：先分清 AI 和普通程序，才理解“从海量文字里学出规律”是什么意思；理解了回答是一个词一个词预测出来的，才真正明白它为什么会说错话，而不是只记住一句“AI 不可信”。</p>
+              <h4>上完认知课之后</h4>
+              <p>想真正动手的孩子还有第二阶段：从计算机基础讲到 Agent 应用与 AI 原生开发的进阶实践课。课时更多，安排单独沟通。</p>
+            </div>
+            <div>
+              <p class="meta">适合几岁</p>
+              <p style="font-size:.93rem;color:var(--ink-2)">一般建议 9 岁（小学三年级）以上。年龄不是硬门槛，理解力才是——第一节课我会先评估，再调整讲法和节奏。</p>
+              <p class="meta">怎么判断听懂了</p>
+              <p style="font-size:.93rem;color:var(--ink-2)">每节课最后由孩子用自己的话复述要点，我据此决定是否调整后续进度。答对不算懂，讲得出“为什么”才算。</p>
+              <p class="meta">家长会关心</p>
+              <p style="font-size:.93rem;color:var(--ink-2)">我会直接谈 AI 的边界：什么时候该查、什么时候不该信、怎样不把思考外包出去。这是教学内容的一部分，不是免责声明。课后有一个约 10 分钟的观察小任务，不打分、不考试。</p>
+              <p><span class="pill pill--live">可预约免费讲解</span> <a class="txtlink" style="margin-left:.6rem;font-size:.9rem" href="contact.html#free">先聊聊孩子的情况 <span class="arw">→</span></a></p>
+            </div>
+          </div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="course">
+    <div class="shell">
+      <div class="chapter">
+        <div class="chapter__idx"><b>03</b>Courses / 课程</div>
+        <div class="chapter__main">
+          <h2>两门课，<br>两种入口。</h2>
+          <p class="chapter__note">一门给完全没基础、想把东西做出来的人打地基；一门给已经在用 Agent、但说不清它怎么工作的人。课序、每课能学到什么、已经发布到哪一节，都写在下面。</p>
+        </div>
+      </div>
+
+      <article class="course-block">
+        <h3 class="course-title">《0 计算机基础的 Agent 应用与开发入门》</h3>
+        <p class="course-meta mono">12 课 · 三个阶段 · 中英双语 · 属于 B 线主课</p>
+
+        <div class="split split--wide">
+          <div class="prose" data-reveal>
+            <p>敲代码这件事正在被 Agent 替代，但有三个环节没有被替代，反而更值钱：说清楚你要什么、理解软件大致怎么组成、判断结果对不对。这门课练的就是这三件事。</p>
+            <p>你可能经历过这样的场景：让 AI 帮你做一个小工具，它给出一大段代码，你复制、运行、报错，把报错贴回去，它改一版又冒出新问题。来回几轮之后，你已经不确定这个程序在做什么，也不知道结果能不能信。这不是因为你不够聪明——你手里缺的是两样东西：把想法准确表达出来的方法，和判断结果对不对的依据。</p>
+            <p>所以课程不从术语开始。它从你每天都在用的软件开始：外卖 App、记账本、手机闹钟。先弄清楚一个普通软件由哪些部分组成、怎么运转，再把 LLM、Agent 这些概念放到具体位置上。ChatGPT 和 Claude Code 本身也是软件，骨架和外卖 App 一样，只是“处理”那一步换成了大模型，并且多出了读写文件、调用工具的能力。</p>
+            <p>前五课几乎不讲 AI，讲的是软件本身：怎么把一句想法拆成输入、处理、输出和数据；一个程序由哪些模块组成、各负责什么；手机和远端服务器怎么分工；一个程序真正跑起来需要什么条件。第 6 课开始，模型才进入这条链。</p>
+          </div>
+          <div data-reveal>
+            <p class="meta" style="margin-bottom:.9rem">课程信息</p>
+            <div class="channels">
+              <div class="channel"><span class="meta">面向</span><span>会用电脑、用过 ChatGPT 或 DeepSeek，但没有计算机基础的学习者</span></div>
+              <div class="channel"><span class="meta">规模</span><span>12 课 · 三个阶段 · 第 12 课为结课考核</span></div>
+              <div class="channel"><span class="meta">每课怎么上</span><span>生活例子 → 核心概念 → 一张图 → 动手练习 → 检查点</span></div>
+              <div class="channel"><span class="meta">成品</span><span>中英双语 A4 PDF，图示与正文配合，下载即可读</span></div>
+              <div class="channel"><span class="meta">先修</span><span>不需要编程经验；数学与逻辑只讲到理解 Agent 所必需的程度</span></div>
+              <div class="channel"><span class="meta">更新</span><span>第 1—3 课已完成发布，其余课次按阶段继续更新</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="syllabus" data-reveal-group style="margin-top:clamp(2.4rem,5vw,4rem)">
+          <div class="syllabus__stage" data-reveal>
+            <p class="meta">阶段一 · 第 1–5 课</p>
+            <h3>先看懂软件，再看懂 AI</h3>
+            <p class="syllabus__q">你会问的问题：ChatGPT、Claude Code 也是软件，它们到底由什么组成？</p>
+            <ul class="lessons">
+              <li class="lesson"><span class="lesson__no">01<i>已发布</i></span><span class="lesson__name">需求拆解：从想法到输入、处理、输出与数据</span><span class="lesson__can">拆解一个陌生的需求，指出规则和信息的遗漏</span></li>
+              <li class="lesson"><span class="lesson__no">02<i>已发布</i></span><span class="lesson__name">软件的组成：程序、数据、模块、职责与基本流程</span><span class="lesson__can">按职责拆模块，并说清模块之间传递了什么</span></li>
+              <li class="lesson"><span class="lesson__no">03<i>已发布</i></span><span class="lesson__name">软件之间的连接：网络、客户端与服务端、API、数据和服务</span><span class="lesson__can">画出本地与远端的分工、一次请求与响应，区分失败发生的位置</span></li>
+              <li class="lesson"><span class="lesson__no">04</span><span class="lesson__name">从设计到运行：理解软件如何组合并产生结果</span><span class="lesson__can">把模块和数据流对应到一个真正运行起来的小例子</span></li>
+              <li class="lesson"><span class="lesson__no">05</span><span class="lesson__name">计算机运行基础：文件、环境、依赖与操作系统</span><span class="lesson__can">解释软件运行需要什么，定位“换台电脑不能运行”的可能原因</span></li>
+            </ul>
+            <p class="syllabus__mile">阶段结束时：你能把一个陌生的小软件（包括一个 AI 工具）画成结构图，并说明它从接收输入到产生输出的完整过程。</p>
+          </div>
+
+          <div class="syllabus__stage" data-reveal>
+            <p class="meta">阶段二 · 第 6–8 课</p>
+            <h3>看懂 AI 与 Agent</h3>
+            <p class="syllabus__q">你会问的问题：Agent 和聊天助手到底差在哪里？</p>
+            <ul class="lessons">
+              <li class="lesson"><span class="lesson__no">06</span><span class="lesson__name">理解 LLM：模型、输入输出、Token、上下文与外部应用</span><span class="lesson__can">区分模型与应用，解释它接收什么、产生什么、局限在哪里</span></li>
+              <li class="lesson"><span class="lesson__no">07</span><span class="lesson__name">理解 Agent：模型、工具、执行环境与工具调用</span><span class="lesson__can">区分聊天助手与 Agent，说明每个组成部分的职责</span></li>
+              <li class="lesson"><span class="lesson__no">08</span><span class="lesson__name">Agent 的运行机制：执行循环、状态、记忆、检索与失败原因</span><span class="lesson__can">跟踪一次执行，指出失败环节和可以检查的证据</span></li>
+            </ul>
+            <p class="syllabus__mile">阶段结束时：你能解释一个 Agent 做错事的几种可能原因，并知道该去哪里检查。</p>
+          </div>
+
+          <div class="syllabus__stage" data-reveal>
+            <p class="meta">阶段三 · 第 9–12 课</p>
+            <h3>用 Agent 做出东西</h3>
+            <p class="syllabus__q">你会问的问题：如何让 Code Agent 替你做出一个能用的作品？</p>
+            <ul class="lessons">
+              <li class="lesson"><span class="lesson__no">09</span><span class="lesson__name">使用 Code Agent：需求表达、监督实现与结果验证</span><span class="lesson__can">写出明确的任务说明，检查实现并提出可验证的修改意见</span></li>
+              <li class="lesson"><span class="lesson__no">10</span><span class="lesson__name">独立设计方案：拆解陌生需求，设计架构与数据流</span><span class="lesson__can">为陌生需求画出结构与数据流，说明关键取舍</span></li>
+              <li class="lesson"><span class="lesson__no">11</span><span class="lesson__name">使用 Code Agent 实现项目：从设计到可运行、可验证的成果</span><span class="lesson__can">完成作品，并用事先定好的标准检查结果</span></li>
+              <li class="lesson"><span class="lesson__no">12</span><span class="lesson__name">结课考核：独立分析陌生需求，设计、实现并解释自己的作品</span><span class="lesson__can">提交作品、验证证据和个人解释，并根据反馈修订</span></li>
+            </ul>
+            <p class="syllabus__mile">阶段结束时：你完成一个可以运行、能自己验证的作品，并讲得清它是怎么来的。</p>
+          </div>
+        </div>
+
+        <div class="split split--even" style="margin-top:clamp(2.4rem,5vw,3.6rem)" data-reveal-group>
+          <div data-reveal>
+            <p class="meta" style="margin-bottom:.9rem">适合谁</p>
+            <ul class="ticks">
+              <li>能熟练使用电脑和手机上的常用软件</li>
+              <li>用过 ChatGPT、DeepSeek 等 AI 工具，但不清楚它们“怎么工作”</li>
+              <li>想借助 AI 做一些自己的小工具或自动化流程</li>
+              <li>愿意花时间想清楚问题，而不是只想复制一段代码就完事</li>
+            </ul>
+          </div>
+          <div data-reveal>
+            <p class="meta" style="margin-bottom:.9rem">不适合谁</p>
+            <ul class="ticks">
+              <li>希望快速学会某一门编程语言的人</li>
+              <li>想系统学习计算机科学与数学的人</li>
+              <li>期待不需要任何思考，就能直接获得成品的人</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="callout" style="margin-top:2rem">
+          <p style="margin:0 0 .5rem"><b>它不做什么。</b>它不会把你变成专业程序员，也不要求你手写代码。工具会更新、界面会变化，课程关注的是变化更慢的那些原理：需求如何拆解，软件如何组成，Agent 如何行动，结果如何验证。判断一门课值不值得上，看课序和已经发布出来的完整课次，比看宣传语可靠。</p>
+        </div>
+
+        <p class="meta" style="margin:clamp(2.4rem,5vw,3.4rem) 0 .9rem">现在就能完整读到的课次 · 中英双语 PDF</p>
+        <div class="notes-grid notes-grid--2" data-reveal-group>
+          <div class="note-card" data-reveal>
+            <p class="meta">第 2 课 · 完整版 · 10 页</p>
+            <h3>软件的组成</h3>
+            <p>一个软件由哪些部分组成，模块按职责怎样分工，信息在模块之间怎么传。承接第 1 课的需求拆解，用同一批生活例子往下走。</p>
+            <p style="margin:1rem 0 0;display:flex;gap:1.2rem;flex-wrap:wrap">
+              <a class="txtlink" href="assets/agent-lesson-02-zh.pdf" download>中文版 <span class="arw">↓</span></a>
+              <a class="txtlink" href="assets/agent-lesson-02-en.pdf" download>English <span class="arw">↓</span></a>
+            </p>
+          </div>
+          <div class="note-card" data-reveal>
+            <p class="meta">第 3 课 · 完整版 · 11 页</p>
+            <h3>软件之间的连接</h3>
+            <p>一次搜索怎样从手机走到远端再回来，本地和远端各自负责什么，失败可能发生在路径上的哪个位置。含三个练习与参考答案。</p>
+            <p style="margin:1rem 0 0;display:flex;gap:1.2rem;flex-wrap:wrap">
+              <a class="txtlink" href="assets/agent-lesson-03-zh.pdf" download>中文版 <span class="arw">↓</span></a>
+              <a class="txtlink" href="assets/agent-lesson-03-en.pdf" download>English <span class="arw">↓</span></a>
+            </p>
+          </div>
+        </div>
+        <p style="margin-top:1.1rem;font-size:.93rem;color:var(--ink-2)">第 1 课和课程先导随粉丝群逐课发布，后面的课次会按阶段继续更新。想从第 1 课按顺序读下来，<a href="contact.html#free">约一次半小时免费讲解</a>，我把已经发布的课次一起发给你。</p>
+      </article>
+
+      <article class="course-block">
+        <h3 class="course-title">《从会用 Agent，到真正理解 Agent》</h3>
+        <p class="course-meta mono">九课 + 最终实践 · 全册已写完 · 写给已经在用 Agent 的人</p>
+
+        <div class="split split--wide">
+          <div class="prose" data-reveal>
+            <p>如果你已经在用 Agent 帮你做事，但被这些问题卡住过：为什么它有时很聪明，有时又像忘了刚才说过的话？为什么它要问你“能不能执行这条命令”？为什么新开一个对话就不认识我了？为什么同一个模型放进不同工具，表现差很多？——这门课就是为这些现象写的。</p>
+            <p>九课是一条推理链，不是术语词典。上一课的结论会引出下一课的问题：模型只依赖这一次送进来的输入，那“记得我之前说的话”是怎么来的；上下文里除了文字还有工具调用和工具结果，那一个只会生成文字的模型怎么让程序动起来；一次调用只能做一次决策，那复杂任务为什么必须反复循环。最后两课把零件装回真实产品，再换到设计者的位置。</p>
+            <p>每一课按同样九段推进：本课要解决的问题、先给直觉、正式解释、和上一课的连接、一个真实案例、一个小实验、常见误解、本课验收、一句话带走。一课 20～30 分钟，实验用你手里现有的工具就能做，不需要额外搭建环境。</p>
+          </div>
+          <div data-reveal>
+            <p class="meta" style="margin-bottom:.9rem">学完之后你能做到</p>
+            <ul class="ticks">
+              <li>向一个完全不懂 Agent 的人解释 LLM、Context、Session、Tool Calling、Agent Loop、Memory、Harness 分别是什么、怎样互相咬合</li>
+              <li>遇到 Agent 出错、忘记、绕圈、乱改时，大致判断问题出在哪一层</li>
+              <li>自己设计一个小实验去验证一个说法，而不是只能背定义</li>
+            </ul>
+            <p class="meta" style="margin:1.5rem 0 .5rem">验收方式</p>
+            <p style="font-size:.93rem;color:var(--ink-2);margin:0">不是背下来，而是你能不看讲义，把它讲给别人听。</p>
+          </div>
+        </div>
+
+        <ul class="lessons" style="margin-top:2rem">
+          <li class="lesson"><span class="lesson__no">01</span><span class="lesson__name">什么是 Agent</span><span class="lesson__can">我每天用的 Codex、Claude Code，到底是什么？</span></li>
+          <li class="lesson"><span class="lesson__no">02</span><span class="lesson__name">LLM 到底在做什么</span><span class="lesson__can">如果 Agent 的“大脑”是 LLM，那 LLM 自己在做什么？</span></li>
+          <li class="lesson"><span class="lesson__no">03</span><span class="lesson__name">没有跨轮状态的模型，为什么聊天像有记忆</span><span class="lesson__can">模型只处理当前输入，那“记得”是从哪来的？</span></li>
+          <li class="lesson"><span class="lesson__no">04</span><span class="lesson__name">Agent 为什么能操作电脑</span><span class="lesson__can">只会生成文字的模型，怎么打开文件、执行命令、调用 API？</span></li>
+          <li class="lesson"><span class="lesson__no">05</span><span class="lesson__name">为什么 Agent 必须不断循环</span><span class="lesson__can">为什么不能调用一次工具，然后就结束？</span></li>
+          <li class="lesson"><span class="lesson__no">06</span><span class="lesson__name">Harness：模型外面那一大套做了什么</span><span class="lesson__can">我输入的一句话，中间到底经过了哪些东西？</span></li>
+          <li class="lesson"><span class="lesson__no">07</span><span class="lesson__name">Agent 为什么会“忘记”</span><span class="lesson__can">上下文可以保存历史，为什么它还是忘东西？</span></li>
+          <li class="lesson"><span class="lesson__no">08</span><span class="lesson__name">为什么需要检索</span><span class="lesson__can">历史信息那么多，难道每次都全部塞给模型？</span></li>
+          <li class="lesson"><span class="lesson__no">09</span><span class="lesson__name">从这些重新理解 Agent Framework</span><span class="lesson__can">如果让我自己设计一个 Agent，我需要什么？</span></li>
+          <li class="lesson"><span class="lesson__no">实践</span><span class="lesson__name">画出你的 Agent，并解释一次完整任务</span><span class="lesson__can">一次任务里，哪部分是模型、哪部分是系统、哪些信息还存在？</span></li>
+        </ul>
+
+        <p style="margin-top:1.4rem;font-size:.93rem;color:var(--ink-2)">这一册的中文版和英文版都已写完。它不要求计算机基础，但要求你已经在用某个 Agent 工具——所有例子都发生在“你已经做过的那件事”里。<a href="contact.html">联系我</a>可以先拿全册目录和一课样章。</p>
+
+        <div class="ink-panel" style="margin-top:clamp(2.4rem,5vw,3.4rem)">
+          <div class="ink-panel__in split split--wide">
+            <p class="pull" style="font-size:clamp(1.3rem,2.8vw,2.1rem);line-height:1.6;margin:0">「真正能从 Agent 中受益的人，不一定是打字最快的人，而是能说清楚自己要什么、并能判断结果是否靠谱的人。」</p>
+            <div>
+              <a class="btn btn--light" href="contact.html#free">约一次半小时免费讲解 <span class="arw">→</span></a>
+              <p class="meta" style="margin-top:1rem">对应视频：<a href="https://www.douyin.com/video/7696886559978687785" target="_blank" rel="noopener" style="color:var(--seal-deep)">从会用到真正理解 Agent：这 12 节课学什么 ↗</a></p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="how">
+    <div class="shell">
+      <div class="chapter">
+        <div class="chapter__idx"><b>04</b>Process / 怎么开始</div>
+        <div class="chapter__main">
+          <h2>从第一次对话，<br>到真正开始。</h2>
+          <p class="chapter__note">流程很短，因为大多数不合适的情况，在第一通对话里就能看出来。第一次沟通是半小时免费讲解，不收钱，也不需要你先决定什么。</p>
+        </div>
+      </div>
+
+      <div class="split split--wide">
+        <div data-reveal>
+          <ol class="flow">
+            <li>你说明情况：谁学、现在的起点、想达到什么</li>
+            <li>半小时免费讲解：我把能做什么、做不到什么讲清楚（线上进行，不收费）</li>
+            <li>我判断这条线是否适合你，并直接说出不适合的地方</li>
+            <li>如果继续：把“学会”换成可以验证的具体事情，确定形式与节奏</li>
+            <li>上课，并在学习过程中持续调整内容</li>
+            <li>阶段性回顾：你带走了什么作品或判断力</li>
+          </ol>
+        </div>
+        <aside class="split__aside" data-reveal>
+          <div class="callout callout--seal">
+            <p class="meta" style="color:var(--seal);margin-bottom:.6rem">半小时免费讲解</p>
+            <p style="margin:0 0 .8rem;font-size:.95rem">线上聊半小时。我先听你说清楚现在的起点和想要的结果，再讲我理解这件事的方式、能帮到哪儿、帮不到哪儿。</p>
+            <p style="margin:0;font-size:.95rem">你不需要当场决定，也不会有人后续追着让你报名。</p>
+          </div>
+          <p style="margin-top:1.4rem"><a class="btn" href="contact.html#free">免费报名 · 半小时讲解 <span class="arw">→</span></a></p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="shell">
+      <div class="chapter">
+        <div class="chapter__idx"><b>05</b>FAQ / 常被问到</div>
+        <div class="chapter__main">
+          <h2>先回答几个<br>实际的问题。</h2>
+          <p class="chapter__note">这些是咨询里最常出现的六个问题。如果这里没有你的情况，直接写信问我就行。</p>
+        </div>
+      </div>
+
+      <div class="notes-grid">
+        <div class="note-card" data-reveal>
+          <p class="meta">家长问</p>
+          <h3>孩子还小，学 AI 是不是太早？</h3>
+          <p>如果指的是提前学编程语法，那确实太早。我教的是理解、信息素养和动手表达，用孩子能懂的案例完成。真正该考虑的是他现在的认知能不能把一件事讲清楚。</p>
+        </div>
+        <div class="note-card" data-reveal>
+          <p class="meta">学员问</p>
+          <h3>我不会写代码，能学 B 线吗？</h3>
+          <p>可以，前提是你愿意补上很薄的一层基础：文件、路径、命令行、数据是怎么流动的。这些不需要几年训练，但绕开它们，Agent 的失败你永远看不懂。</p>
+        </div>
+        <div class="note-card" data-reveal>
+          <p class="meta">报名前问</p>
+          <h3>课程在哪里更新，后面的课怎么拿到？</h3>
+          <p>已经写完的课次先在粉丝群发布，一课写完发一课。官网提供的是能独立读完的完整单课；想跟着课序一路读到结课，直接联系我，我按你的情况安排。</p>
+        </div>
+        <div class="note-card" data-reveal>
+          <p class="meta">自学者问</p>
+          <h3>不上课能不能先自己学？</h3>
+          <p>可以。我的短视频、开源项目和手记都是公开的，本身就是给自学者写的。需要有人帮你判断方向、卡住时能问一句，再考虑课程。</p>
+        </div>
+        <div class="note-card" data-reveal>
+          <p class="meta">报名前问</p>
+          <h3>半小时免费讲解是怎么个讲法？</h3>
+          <p>线上聊半小时。我先听你说清楚现在的起点和想要的结果，再讲我理解这件事的方式、能帮到哪儿、帮不到哪儿。你不需要当场决定，也不会有人后续追着让你报名。</p>
+        </div>
+        <div class="note-card" data-reveal>
+          <p class="meta">报名前问</p>
+          <h3>课程多少钱？</h3>
+          <p>这里不挂数字。费用怎么算，要在半小时免费讲解里按你的实际情况说清楚——谁学、目标是什么、上多久、用什么形式。你听完再决定，不需要当场答复。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="shell cta-band__in">
+      <div>
+        <p class="mono">Start here / 教育</p>
+        <h2>先聊半小时，<em>免费。</em></h2>
+      </div>
+      <div class="cta-band__side">
+        <p>不管是自己想学、给孩子找课，还是机构想把 AI 培训落地，都可以先约一次半小时的免费讲解。我说清楚能做什么、做不到什么，你再决定要不要继续。</p>
+        <a class="btn btn--light" href="contact.html#free">免费报名 · 半小时讲解 <span class="arw">→</span></a>
+        <p class="cta-band__fine">不收费、不推销，也不会有人追着让你报名。</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="shell">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a class="footer__mark" href="index.html">藤氏蓝<span>Ritten Poems</span></a>
+        <p>理解 AI，使用 AI，再借 Agent 把想法做成真实的东西。中国重庆，线上为主。</p>
+      </div>
+      <div>
+        <h4>站点</h4>
+        <ul>
+          <li><a href="teach.html">教育与服务</a></li>
+          <li><a href="works.html">内容与作品</a></li>
+          <li><a href="tech.html">技术与研究</a></li>
+          <li><a href="notes.html">思考与手记</a></li>
+          <li><a href="contact.html">联系</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>本页</h4>
+        <ul>
+          <li><a href="#philosophy">教育理念</a></li>
+          <li><a href="#tracks">三条教学线</a></li>
+          <li><a href="#course">两门课程</a></li>
+          <li><a href="#how">怎么开始</a></li>
+          <li><a href="#faq">常见问题</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>外部</h4>
+        <ul>
+          <li><a href="https://www.douyin.com/user/MS4wLjABAAAA21GorSYDQlH0wF6z7R6nnLK7dC2-dkVyIxDOVbX0vnaSavxGAOLrkOw1Rs21O1Dj" target="_blank" rel="noopener">抖音 · 藤氏蓝的AI教学</a></li>
+          <li><a href="https://space.bilibili.com/355780847" target="_blank" rel="noopener">哔哩哔哩</a></li>
+          <li><a href="https://github.com/rittenpoems-beep" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__mega" aria-hidden="true">藤氏<span>蓝</span></div>
+    <div class="footer__fine">
+      <span>© <span data-year>2026</span> 藤氏蓝 · Ritten Poems</span>
+      <span>课序与课次会随教学持续更新 · 价格与具体安排在免费讲解里说清楚</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

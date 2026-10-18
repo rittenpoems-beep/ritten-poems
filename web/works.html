@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>内容与作品 · 藤氏蓝</title>
+<meta name="description" content="藤氏蓝的 AI 科普短视频、内容创作方法与影像实践：Agent 原理、AI 编程工具、大模型运行机制、自动化与应用开发，以及普通人应该怎么学 AI。">
+<meta name="theme-color" content="#f3efe6">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/site.css">
+<script>document.documentElement.className += " js";</script>
+<script src="js/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<div class="progress" data-progress aria-hidden="true"></div>
+
+<header class="site-head" data-head>
+  <div class="site-head__in">
+    <a class="wordmark" href="index.html" aria-label="藤氏蓝 · Ritten Poems 首页">
+      <svg class="wordmark__mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" fill="#151310"/><rect x="12" y="19" width="40" height="4" fill="#f3efe6"/><rect x="12" y="29" width="30" height="4" fill="#c4785f"/><rect x="12" y="39" width="20" height="4" fill="#c4785f"/><circle cx="48" cy="45" r="5" fill="#a4432f"/></svg>
+      <span class="wordmark__txt"><span class="wordmark__cn">藤氏蓝</span><span class="wordmark__en">Ritten Poems</span></span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a href="teach.html"><i>01</i>教育</a>
+      <a href="works.html" aria-current="page"><i>02</i>作品</a>
+      <a href="tech.html"><i>03</i>技术</a>
+      <a href="notes.html"><i>04</i>手记</a>
+      <a href="contact.html"><i>05</i>联系</a>
+    </nav>
+    <a class="head-cta" href="contact.html#free">预约半小时 <span class="arw">↗</span></a>
+    <button class="nav__toggle" data-nav-toggle aria-expanded="false" aria-controls="mobile-menu"><span></span><span class="nav__toggle-label">目录</span></button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <nav aria-label="移动端导航">
+    <a class="mm-link" href="teach.html"><i>01</i>教育与服务</a>
+    <a class="mm-link" href="works.html"><i>02</i>内容与作品</a>
+    <a class="mm-link" href="tech.html"><i>03</i>技术与研究</a>
+    <a class="mm-link" href="notes.html"><i>04</i>思考与手记</a>
+    <a class="mm-link" href="contact.html"><i>05</i>联系</a>
+  </nav>
+  <div class="mobile-menu__foot mono">
+    <span>Chongqing, CN</span>
+    <a href="contact.html#free">预约免费讲解 ↗</a>
+  </div>
+</div>
+
+<main id="main">
+
+  <section class="page-hero">
+    <span class="page-hero__ghost" aria-hidden="true">作</span>
+    <span class="page-hero__stamp" aria-hidden="true">02</span>
+    <div class="shell page-hero__in">
+      <div class="page-hero__meta mono"><span>02 / Content &amp; Works</span><span>Douyin · Video · Motion</span></div>
+      <h1>把复杂的技术，<br>做成<span class="hl">听得懂</span>的几分钟。</h1>
+      <p class="page-hero__lead">我在抖音讲 AI 知识，主题集中在 Agent、大模型、AI 编程与应用开发。观众里几乎没有程序员，但很多人看完能把我讲的那个机制复述出来——这是我判断内容有没有用的标准。</p>
+      <div class="stats">
+        <div class="stat"><b>10.7万</b><span>单条最高播放<br>Agent 入门避坑</span></div>
+        <div class="stat"><b>17</b><span>本页 AI 主题视频<br>按真实播放量排序</span></div>
+        <div class="stat"><b>4.14万</b><span>近 7 日播放<br>抖音创作者中心</span></div>
+        <div class="stat"><b>689</b><span>粉丝 · 5989 获赞<br>账号当前规模</span></div>
+      </div>
+      <p class="meta" style="margin-top:1rem">以上数据取自抖音创作者中心与账号主页，随账号变化更新。账号仍在起步阶段，我不做估算，也不只挑好看的数字。</p>
+    </div>
+  </section>
+
+  <section class="section" id="list">
+    <div class="shell">
+      <div class="chapter">
+        <div class="chapter__idx"><b>01</b>Index / 片单</div>
+        <div class="chapter__main">
+          <h2>十七个问题，<br>十七次讲清楚。</h2>
+          <p class="chapter__note">本页列出 17 条讲 AI 与 Agent 的视频，按播放量从高到低排列（个人向内容不列）。标题、播放量与链接取自抖音账号主页与创作者中心；点击卡片直接打开对应视频。</p>
+        </div>
+      </div>
+
+      <div class="chips" data-filter="[data-rep]" role="group" aria-label="按主题筛选视频" style="margin-bottom:2rem">
+        <button type="button" class="role" data-value="all" aria-pressed="true">全部 17 条</button>
+        <button type="button" class="role" data-value="agent" aria-pressed="false">Agent 原理</button>
+        <button type="button" class="role" data-value="coding" aria-pressed="false">AI 编程</button>
+        <button type="button" class="role" data-value="llm" aria-pressed="false">大模型机制</button>
+        <button type="button" class="role" data-value="auto" aria-pressed="false">自动化与应用</button>
+        <button type="button" class="role" data-value="learn" aria-pressed="false">学习方法与认知</button>
+      </div>
+
+      <div class="shots" data-reveal-group>
+        <a class="shot" href="https://www.douyin.com/video/7686054890661104905" target="_blank" rel="noopener" data-rep data-theme="agent coding" data-reveal>
+          <div class="shot__frame" aria-hidden="true">
+            <div class="shot__top"><span>Agent 原理 · AI 编程 · 04:58</span></div>
+
+            <span class="shot__no" aria-hidden="true">01</span>
+            <span class="shot__big">Agent 入门避坑<br>先别装 codex？</span>
+            <div class="shot__bottom"><span class="shot__play"><i>▶</i>Watch</span><span class="shot__arrow">↗</span></div>
+          </div>
+          <div class="shot__meta"><span class="shot__title">Agent入门避坑：先别装codex？</span><span class="shot__views">10.7万</span></div>
+        </a>
+
+        <a class="shot" href="https://www.douyin.com/video/7694266442317470054" target="_blank" rel="noopener" data-rep data-theme="learn" data-reveal>
+          <div class="shot__frame" aria-hidden="true">
+            <div class="shot__top"><span>学习方法 · 01:23</span></div>
+
+            <span class="shot__no" aria-hidden="true">02</span>
+            <span class="shot__big">学不懂 AI？<br>可能因为你没有<br>计算机基础知识</span>
+            <div class="shot__bottom"><span class="shot__play"><i>▶</i>Watch</span><span class="shot__arrow">↗</span></div>
+          </div>
+          <div class="shot__meta"><span class="shot__title">学不懂AI？可能因为你没有计算机基础知识</span><span class="shot__views">3.1万</span></div>
+        </a>
+
+        <a class="shot" href="https://www.douyin.com/video/7691309346407660169" target="_blank" rel="noopener" data-rep data-theme="coding learn" data-reveal>
+          <div class="shot__frame" aria-hidden="true">
+            <div class="shot__top"><span>AI 编程 · 01:05</span></div>
+
+            <span class="shot__no" aria-hidden="true">03</span>
+            <span class="shot__big">程序员落幕？<br>不懂计算机的人<br>怎么用 AI？</span>
+            <div class="shot__bottom"><span class="shot__play"><i>▶</i>Watch</span><span class="shot__arrow">↗</span></div>
+          </div>
+          <div class="shot__meta"><span class="shot__title">程序员落幕？不懂计算机的人怎么用AI？</span><span class="shot__views">1.8万</span></div>
+        </a>
+
+        <a class="shot" href="https://www.douyin.com/video/7688700197710384393" target="_blank" rel="noopener" data-rep data-theme="agent learn" data-reveal>
+          <div class="shot__frame" aria-hidden="true">
+            <div class="shot__top"><span>Agent 原理 · 认知</span></div>
+
+            <span class="shot__no" aria-hidden="true">04</span>
+            <span class="shot__big">Codex ≠ 时代风口<br>该学的是<br>工作原理本身</span>
+            <div class="shot__bottom"><span class="shot__play"><i>▶</i>Watch</span><span class="shot__arrow">↗</span></div>
+          </div>
+          <div class="shot__meta"><span class="shot__title">Codex≠时代风口：该学的是Agent工作原理本身</span><span class="shot__views">1.6万</span></div>
+        </a>
+
+        <a class="shot" href="https://www.douyin.com/video/7690495800125112302" target="_blank" rel="noopener" data-rep data-theme="learn" data-reveal>
+          <div class="shot__frame" aria-hidden="true">
+            <div class="shot__top"><span>认知 · 辩论</span></div>
+
+            <span class="shot__no" aria-hidden="true">05</span>
+            <span class="shot__big">人类所有能力<br>会不会被 AI<br>替代？</span>
+            <div class="shot__bottom"><span class="shot__play"><i>▶</i>Watch</span><span class="shot__arrow">↗</span></div>
+          </div>
+          <div class="shot__meta"><span class="shot__title">人类所有能力会不会被Ai替代？</span><span class="shot__views">9701</span></div>
+        </a>
+
+        <a class="shot" href="https://www.douyin.com/video/7692419344051961243" target="_blank" rel="noopener" data-rep data-theme="agent auto" data-reveal>
+          <div class="shot__frame" aria-hidden="true">
+            <div class="shot__top"><span>Agent 原理 · 01:20</span></div>
+
+            <span class="shot__no" aria-hidden="true">06</span>
+            <span class="shot__big">为什么我<br>不推荐大家<br>用 Skill？</span>
+            <div class="shot__bottom"><span class="shot__play"><i>▶</i>Watch</span><span class="shot__arrow">↗</span></div>
+          </div>
+          <div class="shot__meta"><span class="shot__title">为什么我不推荐大家用Skill？</span><span class="shot__views">8027</span></div>
+        </a>
+
+        <a class="shot" href="https://www.douyin.com/video/7687902414527008035" target="_blank" rel="noopener" data-rep data-theme="learn" data-reveal>
+          <div class="shot__frame" aria-hidden="true">
+            <div class="shot__top"><span>学习方法 · 认知</span></div>
+
+            <span class="shot__no" aria-hidden="true">07</span>
+            <span class="shot__big">AI 时代核心能力<br>工程思维<br>才值钱</span>
+            <div class="shot__bottom"><span class="shot__play"><i>▶</i>Watch</span><span class="shot__arrow">↗</span></div>
+          </div>
+          <div class="shot__meta"><span class="shot__title">AI时代核心能力：工程思维才值钱</span><span class="shot__views">2985</span></div>
+        </a>
+
+        <a class="shot" href="https://www.douyin.com/video/7691677788914766282" target="_blank" rel="noopener" data-rep data-theme="coding learn" data-reveal>
+          <div class="shot__frame" aria-hidden="true">
+            <div class="shot__top"><span>AI 编程 · 01:40</span></div>
+
+            <span class="shot__no" aria-hidden="true">08</span>
+            <span class="shot__big">Vibe Coding<br>为什么做不出<br>产品？</span>
+            <div class="shot__bottom"><span class="shot__play"><i>▶</i>Watch</span><span class="shot__arrow">↗</span></div>
+          </div>
+          <div class="shot__meta"><span class="shot__title">Vibe Coding为什么做不出产品？</span><span class="shot__views">1927</span></div>
+        </a>
+
+        <a class="shot" href="https://www.douyin.com/video/7690930560072161994" target="_blank" rel="noopener" data-rep data-theme="agent auto" data-reveal>
+          <div class="shot__frame" aria-hidden="true">
+            <div class="shot__top"><span>Agent 应用 · 01:01</span></div>
+
+            <span class="shot__no" aria-hidden="true">09</span>
+            <span class="shot__big">现在学 AI Agent<br>应用或开发<br>就是抢跑</span>
+            <div class="shot__bottom"><span class="shot__play"><i>▶</i>Watch</span><span class="shot__arrow">↗</span></div>
+          </div>
+          <div class="shot__meta"><span class="shot__title">现在学AI Agent应用或开发就是抢跑</span><span class="shot__views">1925</span></div>
+        </a>
+
+        <a class="shot" href="https://www.douyin.com/video/7695718410243773810" target="_blank" rel="noopener" data-rep data-theme="coding learn" data-reveal>
+          <div class="shot__frame" aria-hidden="true">
+            <div class="shot__top"><span>AI 编程 · 01:17</span></div>
+
+            <span class="shot__no" aria-hidden="true">10</span>
+            <span class="shot__big">Codex 被高估了<br>产品思维<br>被低估了</span>
+            <div class="shot__bottom"><span class="shot__play"><i>▶</i>Watch</span><span class="shot__arrow">↗</span></div>
+          </div>
+          <div class="shot__meta"><span class="shot__title">Codex被高估了，产品思维被低估了</span><span class="shot__views">1893</span></div>
+        </a>
+
+        <a class="shot" href="https://www.douyin.com/video/7687564628745784628" target="_blank" rel="noopener" data-rep data-theme="llm auto" data-reveal>
+          <div class="shot__frame" aria-hidden="true">
+            <div class="shot__top"><span>大模型机制</span></div>
+
+            <span class="shot__no" aria-hidden="true">11</span>
+            <span class="shot__big">大模型没有记忆？<br>AI 记忆<br>是怎么一回事</span>
+            <div class="shot__bottom"><span class="shot__play"><i>▶</i>Watch</span><span class="shot__arrow">↗</span></div>
+          </div>
+          <div class="shot__meta"><span class="shot__title">大模型没有记忆？AI记忆是怎么一回事？</span><span class="shot__views">1886</span></div>
+        </a>
+
+        <a class="shot" href="https://www.douyin.com/video/7690181989932027170" target="_blank" rel="noopener" data-rep data-theme="llm" data-reveal>
+          <div class="shot__frame" aria-hidden="true">
+            <div class="shot__top"><span>大模型机制 · 科普</span></div>
+
+            <span class="shot__no" aria-hidden="true">12</span>
+            <span class="shot__big">AI 简史<br>它是怎么一步步<br>发展到现在的</span>
+            <div class="shot__bottom"><span class="shot__play"><i>▶</i>Watch</span><span class="shot__arrow">↗</span></div>
+          </div>
+          <div class="shot__meta"><span class="shot__title">AI简史：AI是怎么一步步发展到现在的样子的？</span><span class="shot__views">1297</span></div>
+        </a>
+
+        <a class="shot" href="https://www.douyin.com/video/7689455571895930147" target="_blank" rel="noopener" data-rep data-theme="agent llm" data-reveal>
+          <div class="shot__frame" aria-hidden="true">
+            <div class="shot__top"><span>Agent 原理 · 大模型</span></div>
+
+            <span class="shot__no" aria-hidden="true">13</span>
+            <span class="shot__big">AI 认知<br>Agent 与<br>大模型的关系</span>
+            <div class="shot__bottom"><span class="shot__play"><i>▶</i>Watch</span><span class="shot__arrow">↗</span></div>
+          </div>
+          <div class="shot__meta"><span class="shot__title">AI认知：agent与大模型的关系</span><span class="shot__views">1286</span></div>
+        </a>
+
+        <a class="shot" href="https://www.douyin.com/video/7695004101269269833" target="_blank" rel="noopener" data-rep data-theme="learn" data-reveal>
+          <div class="shot__frame" aria-hidden="true">
+            <div class="shot__top"><span>课程 · 00:48</span></div>
+
+            <span class="shot__no" aria-hidden="true">14</span>
+            <span class="shot__big">免费课程<br>开始在粉丝群<br>发放了</span>
+            <div class="shot__bottom"><span class="shot__play"><i>▶</i>Watch</span><span class="shot__arrow">↗</span></div>
+          </div>
+          <div class="shot__meta"><span class="shot__title">免费课程已经开始在粉丝群发放了……</span><span class="shot__views">1069</span></div>
+        </a>
+
+        <a class="shot" href="https://www.douyin.com/video/7693542104487752026" target="_blank" rel="noopener" data-rep data-theme="learn" data-reveal>
+          <div class="shot__frame" aria-hidden="true">
+            <div class="shot__top"><span>认知 · 00:45</span></div>
+
+            <span class="shot__no" aria-hidden="true">15</span>
+            <span class="shot__big">到底<br>在观望<br>什么……</span>
+            <div class="shot__bottom"><span class="shot__play"><i>▶</i>Watch</span><span class="shot__arrow">↗</span></div>
+          </div>
+          <div class="shot__meta"><span class="shot__title">到底在观望什么……</span><span class="shot__views">878</span></div>
+        </a>
+
+        <a class="shot" href="https://www.douyin.com/video/7696886559978687785" target="_blank" rel="noopener" data-rep data-theme="agent learn" data-reveal>
+          <div class="shot__frame" aria-hidden="true">
+            <div class="shot__top"><span>课程系列 · 03:51</span></div>
+
+            <span class="shot__no" aria-hidden="true">16</span>
+            <span class="shot__big">从会用到真正理解<br>这 12 节课<br>到底学什么</span>
+            <div class="shot__bottom"><span class="shot__play"><i>▶</i>Watch</span><span class="shot__arrow">↗</span></div>
+          </div>
+          <div class="shot__meta"><span class="shot__title">从会用到真正理解Agent：这12节课学什么</span><span class="shot__views">843</span></div>
+        </a>
+
+        <a class="shot" href="https://www.douyin.com/video/7687224153405001012" target="_blank" rel="noopener" data-rep data-theme="coding auto" data-reveal>
+          <div class="shot__frame" aria-hidden="true">
+            <div class="shot__top"><span>AI 编程 · 成本</span></div>
+
+            <span class="shot__no" aria-hidden="true">17</span>
+            <span class="shot__big">Codex + DeepSeek<br>省钱秘籍</span>
+            <div class="shot__bottom"><span class="shot__play"><i>▶</i>Watch</span><span class="shot__arrow">↗</span></div>
+          </div>
+          <div class="shot__meta"><span class="shot__title">Codex+deepseek：省钱秘籍！</span><span class="shot__views">293</span></div>
+        </a>
+      </div>
+
+      <div class="callout" style="margin-top:2.2rem">
+        <p style="margin:0 0 .5rem"><b>关于这些数字。</b>播放量取自抖音创作者中心，账号仍处于起步阶段。我按播放量排序，但不隐藏低播放的条目——一条讲清楚机制的视频拿到 843 次播放，也是我真实的成绩。</p>
+        <p style="margin:0;font-size:.9rem;color:var(--ink-3)">新增一条视频时，复制任意一个 <code>&lt;a class="shot"&gt;</code> 块，改标题、时长、播放量与链接即可，筛选按钮会自动生效。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="topics">
+    <div class="shell">
+      <div class="chapter">
+        <div class="chapter__idx"><b>02</b>Topics / 主题</div>
+        <div class="chapter__main">
+          <h2>我在讲哪些主题。</h2>
+        </div>
+      </div>
+
+      <div class="split split--wide">
+        <div class="prose" data-reveal>
+          <p>我的内容不是工具测评清单，也不是热点新闻转发。我更想讲清楚一件东西是怎么运转的，以及它跟你的生活和工作到底能怎么接上。</p>
+          <p>表达上我倾向于直观、具体：能用一个真实案例说明的机制，就不用三段抽象描述；能用一个日常类比拆开的概念，就不搬术语。观众里没有几个是程序员，但他们中的很多人最后能复述出我讲的那个机制——这才是我认为内容有效的标志。</p>
+          <p>这也是我后来做课程的原因。一条几分钟的视频能让你第一次听懂，但要把一整套判断力留下来，还需要有人带着你按顺序走一遍。</p>
+        </div>
+        <div data-reveal>
+          <p class="meta" style="margin-bottom:.9rem">六个方向 · 括号里是对应的视频</p>
+          <ul class="ticks">
+            <li>AI Agent 的概念与原理（《Agent入门避坑：先别装codex？》《AI认知：agent与大模型的关系》）</li>
+            <li>AI 编程工具与它们的真实能力（《程序员落幕？不懂计算机的人怎么用AI？》《Codex被高估了，产品思维被低估了》）</li>
+            <li>把产品做出来需要什么（《Vibe Coding为什么做不出产品？》《现在学AI Agent应用或开发就是抢跑》）</li>
+            <li>LLM 的运行机制与发展脉络（《AI简史》《大模型没有记忆？AI记忆是怎么一回事？》）</li>
+            <li>普通人应该怎么学 AI（《学不懂AI？可能因为你没有计算机基础知识》《AI时代核心能力：工程思维才值钱》）</li>
+            <li>工具的实际成本与用法（《Codex+deepseek：省钱秘籍！》《为什么我不推荐大家用Skill？》）</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="method">
+    <div class="shell">
+      <div class="chapter">
+        <div class="chapter__idx"><b>03</b>Method / 制作</div>
+        <div class="chapter__main">
+          <h2>一条视频<br>是怎么做出来的。</h2>
+          <p class="chapter__note">这也是我在课堂上会讲的东西：一个抽象主题，要经过哪些步骤才能变成别人看得完的东西。</p>
+        </div>
+      </div>
+
+      <div class="split split--wide">
+        <div data-reveal>
+          <ol class="flow">
+            <li>先把机制自己搞明白，读文档、跑一遍、看它怎么失败</li>
+            <li>决定这条视频只回答一个问题</li>
+            <li>找一个具体案例或日常类比承载这个机制</li>
+            <li>写口播稿，把句子改到能被听懂为止</li>
+            <li>规划画面：结构、Motion Design、重点出现的时机</li>
+            <li>让 Agent 参与重复环节：字幕、时间轴、素材处理、渲染</li>
+            <li>检查一遍内容是否准确，再发布</li>
+          </ol>
+          <div class="callout callout--seal" style="margin-top:2rem">第 6 步连着我在做的另一件事：<a href="tech.html#workflow">AI 视频自动化生产工作流</a>。做内容做到一定程度，重复劳动本身就成了创作的限制，于是我把它当成一个工程问题处理。</div>
+        </div>
+        <div data-reveal>
+          <p class="meta" style="margin-bottom:.9rem">我判断内容好坏的标准</p>
+          <ul class="ticks">
+            <li>观众能不能用自己的话复述这个机制</li>
+            <li>有没有把局限和边界一起讲清楚</li>
+            <li>看完之后他能不能去做一件具体的事</li>
+            <li>我自己是否真的验证过这套说法</li>
+          </ul>
+          <p style="margin-top:1.8rem"><a class="txtlink" href="tech.html#workflow">看自动化工作流 <span class="arw">↗</span></a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--ink" id="moving-image">
+    <div class="shell">
+      <div class="chapter">
+        <div class="chapter__idx"><b>04</b>Moving image / 影像</div>
+        <div class="chapter__main">
+          <h2>技术之外，<br>我确实喜欢画面。</h2>
+          <p class="chapter__note">电影、摄影、剪辑与 Motion Design——它们不是装饰，而是我理解节奏和表达的另一种方式。</p>
+        </div>
+      </div>
+
+      <div class="split">
+        <div class="prose" data-reveal style="max-width:none">
+          <p>我一直喜欢电影，也曾经想从事电影创作。我做过婚礼摄影摄像的实际工作，习惯在现场决定机位、节奏和叙事顺序——一段素材什么时候该剪、什么时候该留白，这件事和讲课时的节奏控制其实是同一种能力。</p>
+          <p>现在我在把这套兴趣和 AI 接起来：AI 生成影像、真实素材、自动化剪辑和创意短片，以及把 Motion Design 用在知识表达上。</p>
+        </div>
+        <div data-reveal>
+          <p class="meta" style="margin-bottom:.9rem">目前的状态</p>
+          <ul class="ticks">
+            <li>婚礼摄影与摄像：有实际拍摄经验，样例未整理</li>
+            <li>Motion Design：用于视频中的信息图与转场</li>
+            <li>AI 生成影像：在实验，还没有可公开的成片</li>
+          </ul>
+          <p style="font-size:.86rem;color:rgba(247,243,233,.44);margin-top:1.2rem">没有真实素材的位置，我不会用生成的画面冒充拍摄作品。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="shell">
+      <div class="callout callout--seal" style="max-width:48em">
+        <p style="margin:0"><b>这一页会继续长大。</b>短视频、文章、研究笔记、摄影和影像作品都会持续加入。想第一时间看到新内容，可以关注抖音，或者直接写信告诉我你想看什么主题。</p>
+      </div>
+      <div class="link-row">
+        <a class="btn" href="https://www.douyin.com/user/MS4wLjABAAAA21GorSYDQlH0wF6z7R6nnLK7dC2-dkVyIxDOVbX0vnaSavxGAOLrkOw1Rs21O1Dj" target="_blank" rel="noopener">去抖音看全部视频 <span class="arw">→</span></a>
+        <a class="txtlink" href="contact.html#free">想合作内容或课程 <span class="arw">↗</span></a>
+        <a class="txtlink" href="tech.html">技术与研究 <span class="arw">↗</span></a>
+        <a class="txtlink" href="notes.html">思考与手记 <span class="arw">↗</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="shell cta-band__in">
+      <div>
+        <p class="mono">Start here / 作品</p>
+        <h2>看完了，<em>聊一次？</em></h2>
+      </div>
+      <div class="cta-band__side">
+        <p>如果你想知道这些视频背后的课怎么上、你的情况适合从哪条线开始，可以约一次半小时的免费讲解。我会直接说清楚能做什么、做不到什么。</p>
+        <a class="btn btn--light" href="contact.html#free">免费报名 · 半小时讲解 <span class="arw">→</span></a>
+        <p class="cta-band__fine">不收费、不推销，也不会有人追着让你报名。</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="shell">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a class="footer__mark" href="index.html">藤氏蓝<span>Ritten Poems</span></a>
+        <p>理解 AI，使用 AI，再借 Agent 把想法做成真实的东西。中国重庆，线上为主。</p>
+      </div>
+      <div>
+        <h4>站点</h4>
+        <ul>
+          <li><a href="teach.html">教育与服务</a></li>
+          <li><a href="works.html">内容与作品</a></li>
+          <li><a href="tech.html">技术与研究</a></li>
+          <li><a href="notes.html">思考与手记</a></li>
+          <li><a href="contact.html">联系</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>本页</h4>
+        <ul>
+          <li><a href="#list">片单</a></li>
+          <li><a href="#topics">内容主题</a></li>
+          <li><a href="#method">创作方法</a></li>
+          <li><a href="#moving-image">影像与摄影</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>外部</h4>
+        <ul>
+          <li><a href="https://www.douyin.com/user/MS4wLjABAAAA21GorSYDQlH0wF6z7R6nnLK7dC2-dkVyIxDOVbX0vnaSavxGAOLrkOw1Rs21O1Dj" target="_blank" rel="noopener">抖音 · 藤氏蓝的AI教学</a></li>
+          <li><a href="https://space.bilibili.com/355780847" target="_blank" rel="noopener">哔哩哔哩</a></li>
+          <li><a href="https://github.com/rittenpoems-beep" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__mega" aria-hidden="true">藤氏<span>蓝</span></div>
+    <div class="footer__fine">
+      <span>© <span data-year>2026</span> 藤氏蓝 · Ritten Poems</span>
+      <span>播放数据等公开指标一律取自创作者中心实际数字，不做估算或夸大。</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" role="img" aria-labelledby="title desc">
+  <title id="title">冒烟测试与完整验收之间的差距</title>
+  <desc id="desc">用三维、音乐与 Three.js 三个真实实验说明：进程成功、文件存在、指标正常只能证明能运行；完整验收还需要对照参考、人的判断与交付责任。</desc>
+  <defs>
+    <marker id="arrow-gate" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8A8175"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="780" fill="#F6F1E7"/>
+  <rect x="24" y="24" width="1152" height="732" fill="none" stroke="#D8CDBD"/>
+
+  <g font-family="'Noto Sans SC','Microsoft YaHei',sans-serif">
+    <text x="48" y="74" font-size="28" font-weight="700" fill="#1C1B19">它能工作，不等于它值得交付</text>
+    <text x="48" y="101" font-size="13" fill="#5E5A52">局部验证证明「没有立刻坏掉」；完整验收回答「这是不是我们要的东西」。</text>
+    <text x="1152" y="74" text-anchor="end" font-family="'JetBrains Mono','Consolas',monospace" font-size="11" fill="#3E5C6B">PLATE 05 / ACCEPTANCE GATES</text>
+    <text x="1152" y="101" text-anchor="end" font-family="'JetBrains Mono','Consolas',monospace" font-size="11" fill="#8A8175">RITTEN POEMS · 2026.10</text>
+
+    <!-- definitions -->
+    <rect x="48" y="120" width="540" height="122" fill="#FBF7EF" stroke="#2A2824" stroke-width="1.3"/>
+    <rect x="48" y="120" width="5" height="122" fill="#3E5C6B"/>
+    <text x="70" y="147" font-family="'JetBrains Mono','Consolas',monospace" font-size="10" fill="#3E5C6B">SMOKE TEST / 冒烟测试</text>
+    <text x="70" y="173" font-size="16" font-weight="700" fill="#1C1B19">证明系统没有立刻坏掉</text>
+    <text x="70" y="197" font-size="11.5" fill="#3F3B35">进程退出码为 0 · 文件确实生成 · 格式能打开 · 指标落在范围内</text>
+    <text x="70" y="217" font-size="11.5" fill="#3F3B35">转写能读出一部分歌词 · 页面没有控制台报错</text>
+    <text x="70" y="237" font-size="10.5" fill="#8A8175">它适合在每次改动后快速排除「坏了」，但它不知道什么是「好」。</text>
+
+    <rect x="612" y="120" width="540" height="122" fill="#FBF7EF" stroke="#2A2824" stroke-width="1.3"/>
+    <rect x="612" y="120" width="5" height="122" fill="#B23A2B"/>
+    <text x="634" y="147" font-family="'JetBrains Mono','Consolas',monospace" font-size="10" fill="#B23A2B">ACCEPTANCE / 完整验收</text>
+    <text x="634" y="173" font-size="16" font-weight="700" fill="#1C1B19">回答「这是不是我们要的东西」</text>
+    <text x="634" y="197" font-size="11.5" fill="#3F3B35">与参考同机位 / 同段落对照 · 人真的听 / 真的看 · 交付物齐全</text>
+    <text x="634" y="217" font-size="11.5" fill="#3F3B35">性能、稳定性、可维护性、成本、版权与行业规范</text>
+    <text x="634" y="237" font-size="10.5" fill="#8A8175">它包含主观判断与责任，无法被一条测试命令完全替代。</text>
+
+    <!-- table -->
+    <rect x="48" y="268" width="1104" height="40" fill="#EFE7D8" stroke="#2A2824" stroke-width="1.2"/>
+    <text x="64" y="293" font-family="'JetBrains Mono','Consolas',monospace" font-size="10" fill="#5E5A52">CASE</text>
+    <text x="234" y="293" font-size="11" font-weight="700" fill="#2E4A58">冒烟测试 ✓ 通过了什么</text>
+    <text x="504" y="293" font-size="11" font-weight="700" fill="#8E2E22">完整验收 ✗ 暴露了什么</text>
+    <text x="974" y="293" font-size="11" font-weight="700" fill="#5E5A52">结论</text>
+
+    <!-- row 1 -->
+    <rect x="48" y="308" width="1104" height="86" fill="#FBF7EF" stroke="#D8CDBD"/>
+    <rect x="48" y="308" width="4" height="86" fill="#B23A2B"/>
+    <text x="64" y="332" font-size="13" font-weight="700" fill="#1C1B19">三维 · Blender</text>
+    <text x="64" y="350" font-size="9.5" fill="#8A8175" font-family="'JetBrains Mono','Consolas',monospace">QUIET ROOM / ALPINE DRIVE</text>
+    <text x="64" y="370" font-size="10" fill="#5E5A52">Cycles · RTX 4060</text>
+
+    <text x="234" y="332" font-size="10.5" fill="#3F3B35">Quiet Room：.blend 可打开、可重渲，整景实际出图</text>
+    <text x="234" y="350" font-size="10.5" fill="#3F3B35">Alpine：正式工程与 hero_final 存在，三套灯光可切换</text>
+    <text x="234" y="368" font-size="10.5" fill="#3F3B35">Cycles 渲染无崩溃，输出格式与尺寸正确</text>
+    <text x="234" y="386" font-size="10" fill="#8A8175">两个工程都能「打开、改、再渲一张」</text>
+
+    <text x="504" y="332" font-size="10.5" fill="#3F3B35">Quiet Room：房间完整性、参考光影与运镜仍有明确欠缺，未获认可</text>
+    <text x="504" y="350" font-size="10.5" fill="#3F3B35">2,224 个对象 / 189 张贴图；无完成版动画 MP4，未形成交付清单</text>
+    <text x="504" y="368" font-size="10.5" fill="#3F3B35">Alpine：村庄比例、山体与车内简化几何未达替换标准，v63 未进成片</text>
+    <text x="504" y="386" font-size="10.5" fill="#3F3B35">两者都停在「能打开、能出图」，没有走到「可交付」</text>
+
+    <text x="974" y="332" font-size="10.5" font-weight="700" fill="#8E2E22">未交付 / 终止</text>
+    <text x="974" y="350" font-size="10" fill="#5E5A52">Alpine Drive 终止；</text>
+    <text x="974" y="366" font-size="10" fill="#5E5A52">Quiet Room 未获批准。</text>
+    <text x="974" y="384" font-size="9.5" fill="#8A8175">状态：实验，不是作品</text>
+
+    <!-- row 2 -->
+    <rect x="48" y="394" width="1104" height="86" fill="#FBF7EF" stroke="#D8CDBD"/>
+    <rect x="48" y="394" width="4" height="86" fill="#B23A2B"/>
+    <text x="64" y="418" font-size="13" font-weight="700" fill="#1C1B19">音乐 · ACE Studio</text>
+    <text x="64" y="436" font-size="9.5" fill="#8A8175" font-family="'JetBrains Mono','Consolas',monospace">SAMPLED MIDI / 15.36 S</text>
+    <text x="64" y="456" font-size="10" fill="#5E5A52">CLI 0.17 · 7 条人声分轨</text>
+
+    <text x="234" y="418" font-size="10.5" fill="#3F3B35">BWU v4：3:04 音乐生成，99 BPM · B 小调 · 76 小节</text>
+    <text x="234" y="436" font-size="10.5" fill="#3F3B35">7 条人声分轨全部导出，ACE 工程可保存并重开</text>
+    <text x="234" y="454" font-size="10.5" fill="#3F3B35">混音、母带、频谱与段落分析全部跑通</text>
+    <text x="234" y="472" font-size="10" fill="#8A8175">15 s 前作也通过了时长 / 响度 / 真峰检查</text>
+
+    <text x="504" y="418" font-size="10.5" fill="#3F3B35">多音节词咬字含混；副歌最高音区清晰度明显下降，只能整体降调换可懂度</text>
+    <text x="504" y="436" font-size="10.5" fill="#3F3B35">段落电平与参考相反：outro 一度比 chorus 低近 10 dB，bridge 低 3 dB</text>
+    <text x="504" y="454" font-size="10.5" fill="#3F3B35">主旋律只跨 5 个半音、89% 级进，与 40 首语料画像不符；重写后又丢音</text>
+    <text x="504" y="472" font-size="10.5" fill="#3F3B35">修完旋律与音素，v4 仍被判断为「诡异」；指标全过，人耳不通过</text>
+
+    <text x="974" y="418" font-size="10.5" font-weight="700" fill="#8E2E22">终止</text>
+    <text x="974" y="436" font-size="10" fill="#5E5A52">2026-10-20 实验结束，</text>
+    <text x="974" y="452" font-size="10" fill="#5E5A52">不作为作品发布。</text>
+    <text x="974" y="470" font-size="9.5" fill="#8A8175">保留公开仓库与复盘</text>
+
+    <!-- row 3 -->
+    <rect x="48" y="480" width="1104" height="86" fill="#F7F9F4" stroke="#D8CDBD"/>
+    <rect x="48" y="480" width="4" height="86" fill="#6F7F6A"/>
+    <text x="64" y="504" font-size="13" font-weight="700" fill="#1C1B19">三维 · Three.js</text>
+    <text x="64" y="522" font-size="9.5" fill="#8A8175" font-family="'JetBrains Mono','Consolas',monospace">RAINY NIGHT MART</text>
+    <text x="64" y="542" font-size="10" fill="#5E5A52">浏览器实时 · 两条路线对照</text>
+
+    <text x="234" y="504" font-size="10.5" fill="#3F3B35">页面加载成功，门循环 15.5 s</text>
+    <text x="234" y="522" font-size="10.5" fill="#3F3B35">控制台无报错；离线版零外部请求</text>
+    <text x="234" y="540" font-size="10.5" fill="#3F3B35">CDN 与本地打包两条路线均可运行</text>
+    <text x="234" y="558" font-size="10" fill="#8A8175">交付物形态与验收标准在开工前写清</text>
+
+    <text x="504" y="504" font-size="10.5" fill="#3F3B35">2,101 primitives · 247,038 tris · 255 draw calls</text>
+    <text x="504" y="522" font-size="10.5" fill="#3F3B35">36.9 fps @ 1440×1080，满足实时浏览的性能预算</text>
+    <text x="504" y="540" font-size="10.5" fill="#3F3B35">同机位对照参考：氛围、构图、雨夜材质达到约定范围</text>
+    <text x="504" y="558" font-size="10.5" fill="#3F3B35">明确它不承担「可编辑影视资产」的职责，范围外不冒充交付</text>
+
+    <text x="974" y="504" font-size="10.5" font-weight="700" fill="#4E5D49">可交付</text>
+    <text x="974" y="522" font-size="10" fill="#5E5A52">浏览器演示，范围明确；</text>
+    <text x="974" y="538" font-size="10" fill="#5E5A52">不是影视级资产。</text>
+    <text x="974" y="556" font-size="9.5" fill="#8A8175">通过，是因为标准先写好</text>
+
+    <!-- gate ladder -->
+    <text x="48" y="596" font-family="'JetBrains Mono','Consolas',monospace" font-size="10" fill="#8A8175">THE GATE LADDER / 四道闸门</text>
+    <text x="1152" y="596" text-anchor="end" font-size="10.5" fill="#5E5A52">前三关可以自动化，最后一关只能由人通过。</text>
+
+    <rect x="48" y="608" width="240" height="60" fill="#FBF7EF" stroke="#3E5C6B" stroke-width="1.2"/>
+    <text x="62" y="630" font-family="'JetBrains Mono','Consolas',monospace" font-size="9" fill="#3E5C6B">GATE 01</text>
+    <text x="62" y="648" font-size="13" font-weight="700" fill="#1C1B19">能运行</text>
+    <text x="62" y="662" font-size="9.5" fill="#5E5A52">进程成功 · 文件存在</text>
+
+    <path d="M292 638 H320" stroke="#8A8175" marker-end="url(#arrow-gate)"/>
+    <rect x="328" y="608" width="240" height="60" fill="#FBF7EF" stroke="#3E5C6B" stroke-width="1.2"/>
+    <text x="342" y="630" font-family="'JetBrains Mono','Consolas',monospace" font-size="9" fill="#3E5C6B">GATE 02</text>
+    <text x="342" y="648" font-size="13" font-weight="700" fill="#1C1B19">符合规格</text>
+    <text x="342" y="662" font-size="9.5" fill="#5E5A52">时长 · 格式 · 指标</text>
+
+    <path d="M572 638 H600" stroke="#8A8175" marker-end="url(#arrow-gate)"/>
+    <rect x="608" y="608" width="240" height="60" fill="#FBF7EF" stroke="#B23A2B" stroke-width="1.2"/>
+    <text x="622" y="630" font-family="'JetBrains Mono','Consolas',monospace" font-size="9" fill="#B23A2B">GATE 03</text>
+    <text x="622" y="648" font-size="13" font-weight="700" fill="#1C1B19">符合参照</text>
+    <text x="622" y="662" font-size="9.5" fill="#5E5A52">同机位 · 同段落 · 盲听</text>
+
+    <path d="M852 638 H880" stroke="#8A8175" marker-end="url(#arrow-gate)"/>
+    <rect x="888" y="608" width="240" height="60" fill="#FBF7EF" stroke="#B23A2B" stroke-width="1.2"/>
+    <text x="902" y="630" font-family="'JetBrains Mono','Consolas',monospace" font-size="9" fill="#B23A2B">GATE 04</text>
+    <text x="902" y="648" font-size="13" font-weight="700" fill="#1C1B19">愿意签字</text>
+    <text x="902" y="662" font-size="9.5" fill="#5E5A52">满意 · 可维护 · 可交付</text>
+
+    <line x1="48" y1="684" x2="568" y2="684" stroke="#3E5C6B" stroke-width="1"/>
+    <line x1="608" y1="684" x2="1128" y2="684" stroke="#B23A2B" stroke-width="1"/>
+    <text x="308" y="700" text-anchor="middle" font-size="10" fill="#2E4A58">AI 可以自己跑完：没有立刻坏掉</text>
+    <text x="868" y="700" text-anchor="middle" font-size="10" fill="#8E2E22">需要人参与：是否值得交付、是否愿意负责</text>
+
+    <text x="48" y="740" font-size="12" fill="#5E5A52">验收标准不是交付前才写的检查表，而是开工前就要写好的「什么算完成」。</text>
+    <text x="1152" y="740" text-anchor="end" font-family="'JetBrains Mono','Consolas',monospace" font-size="10" fill="#8A8175">WORKFLOW DECOMPOSITION / 05</text>
+  </g>
+</svg>

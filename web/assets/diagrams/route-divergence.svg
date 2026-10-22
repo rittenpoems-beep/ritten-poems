@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+  <title id="title">同一需求的两条技术路线</title>
+  <desc id="desc">同一句三维场景需求，按交付物约束分叉为 Three.js 浏览器实时展示与 Blender 可编辑资产、离线渲染两条路线；并说明在错误路线上持续修补的代价。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1C1B19"/>
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#B23A2B"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="820" fill="#F6F1E7"/>
+  <rect x="24" y="24" width="1152" height="772" fill="none" stroke="#D8CDBD"/>
+
+  <g font-family="'Noto Sans SC','Microsoft YaHei',sans-serif">
+    <text x="48" y="74" font-size="28" font-weight="700" fill="#1C1B19">同一个需求，两条完全不同的路线</text>
+    <text x="48" y="101" font-size="13" fill="#5E5A52">需求不指定工具。决定路线的，是交付物以及围绕交付物的全部约束。</text>
+    <text x="1152" y="74" text-anchor="end" font-family="'JetBrains Mono','Consolas',monospace" font-size="11" fill="#3E5C6B">PLATE 03 / ROUTE DIVERGENCE</text>
+    <text x="1152" y="101" text-anchor="end" font-family="'JetBrains Mono','Consolas',monospace" font-size="11" fill="#8A8175">RITTEN POEMS · 2026.10</text>
+
+    <!-- brief -->
+    <rect x="48" y="116" width="1104" height="88" fill="#FBF7EF" stroke="#2A2824" stroke-width="1.4"/>
+    <rect x="48" y="116" width="6" height="88" fill="#B23A2B"/>
+    <text x="72" y="143" font-family="'JetBrains Mono','Consolas',monospace" font-size="10" fill="#B23A2B">SAME BRIEF / 同一句需求</text>
+    <text x="72" y="172" font-size="21" font-weight="700" fill="#1C1B19">「做一个雨夜街角便利店的三维场景，要有电影感。」</text>
+    <text x="72" y="194" font-size="12" fill="#5E5A52">这句话没有说：交给谁看、在哪里运行、是否需要继续修改、最终要交付什么文件。</text>
+    <text x="1128" y="150" text-anchor="end" font-family="'JetBrains Mono','Consolas',monospace" font-size="10" fill="#8A8175">BRIEF → CONSTRAINTS → ROUTE</text>
+    <text x="1128" y="172" text-anchor="end" font-size="12" fill="#5E5A52">缺的不是提示词，</text>
+    <text x="1128" y="190" text-anchor="end" font-size="12" fill="#5E5A52">是交付物的定义。</text>
+
+    <!-- constraint strip -->
+    <rect x="48" y="220" width="1104" height="32" fill="#EFE7D8" stroke="#D8CDBD"/>
+    <text x="600" y="241" text-anchor="middle" font-size="12" fill="#3F3B35">决定路线的不是「AI 会什么」，而是：<tspan font-weight="700">交付物形态 · 谁来编辑 · 实时性 · 画质与渲染 · 运行环境</tspan></text>
+
+    <!-- fork -->
+    <path d="M600 252 V268 H308 V310" fill="none" stroke="#1C1B19" stroke-width="1.4" marker-end="url(#arrow)"/>
+    <path d="M600 252 V268 H892 V310" fill="none" stroke="#1C1B19" stroke-width="1.4" marker-end="url(#arrow)"/>
+    <text x="430" y="290" text-anchor="middle" font-size="11" fill="#2E4A58">若交付物是网页里的实时场景</text>
+    <text x="770" y="290" text-anchor="middle" font-size="11" fill="#8E2E22">若交付物是可编辑资产与离线成片</text>
+
+    <!-- route A -->
+    <g>
+      <rect x="48" y="314" width="520" height="252" fill="#FBF7EF" stroke="#2A2824" stroke-width="1.4"/>
+      <rect x="48" y="314" width="520" height="54" fill="#E2EBEF"/>
+      <text x="68" y="336" font-family="'JetBrains Mono','Consolas',monospace" font-size="10" fill="#3E5C6B">ROUTE A / 浏览器实时交互</text>
+      <text x="68" y="358" font-size="17" font-weight="700" fill="#1C1B19">Three.js：单文件、秒开、可分享</text>
+      <text x="548" y="358" text-anchor="end" font-family="'JetBrains Mono','Consolas',monospace" font-size="10" fill="#3E5C6B">FIT ✓</text>
+      <text x="68" y="388" font-size="11" fill="#5E5A52">技术栈：Three.js · 单 HTML · CDN import map · 程序化几何</text>
+
+      <rect x="68" y="400" width="144" height="48" fill="#F6F1E7" stroke="#C9BFae"/>
+      <text x="140" y="420" text-anchor="middle" font-size="11" font-weight="700" fill="#1C1B19">场景搭建</text>
+      <text x="140" y="436" text-anchor="middle" font-size="10" fill="#5E5A52">几何 / 材质 / 雾</text>
+      <path d="M216 424 H232" stroke="#1C1B19" marker-end="url(#arrow)"/>
+      <rect x="236" y="400" width="144" height="48" fill="#F6F1E7" stroke="#C9BFae"/>
+      <text x="308" y="420" text-anchor="middle" font-size="11" font-weight="700" fill="#1C1B19">光照与氛围</text>
+      <text x="308" y="436" text-anchor="middle" font-size="10" fill="#5E5A52">霓虹 / 湿地反射</text>
+      <path d="M384 424 H400" stroke="#1C1B19" marker-end="url(#arrow)"/>
+      <rect x="404" y="400" width="144" height="48" fill="#F6F1E7" stroke="#C9BFae"/>
+      <text x="476" y="420" text-anchor="middle" font-size="11" font-weight="700" fill="#1C1B19">性能预算</text>
+      <text x="476" y="436" text-anchor="middle" font-size="10" fill="#5E5A52">帧率 / 绘制调用</text>
+
+      <text x="68" y="472" font-family="'JetBrains Mono','Consolas',monospace" font-size="10" fill="#3E5C6B">MEASURED / ROUTE B</text>
+      <text x="68" y="490" font-size="11" fill="#3F3B35">2,101 primitives · 247,038 tris · 255 draw calls</text>
+      <text x="68" y="507" font-size="11" fill="#3F3B35">36.9 fps @ 1440×1080（Intel UHD）· 离线零请求</text>
+      <text x="68" y="528" font-size="11" fill="#4E5D49">适合：网页展示、交互叙事、现场演示、需要链接就能打开。</text>
+      <text x="68" y="548" font-size="11" fill="#8E2E22">错配：要求 .blend 工程、分层渲染、影视级材质与灯光时。</text>
+    </g>
+
+    <!-- route B -->
+    <g>
+      <rect x="632" y="314" width="520" height="252" fill="#FBF7EF" stroke="#2A2824" stroke-width="1.4"/>
+      <rect x="632" y="314" width="520" height="54" fill="#F3E2DE"/>
+      <text x="652" y="336" font-family="'JetBrains Mono','Consolas',monospace" font-size="10" fill="#B23A2B">ROUTE B / 可编辑资产 + 离线渲染</text>
+      <text x="652" y="358" font-size="17" font-weight="700" fill="#1C1B19">Blender：工程文件、分层、可修改</text>
+      <text x="1132" y="358" text-anchor="end" font-family="'JetBrains Mono','Consolas',monospace" font-size="10" fill="#B23A2B">FIT ✓</text>
+      <text x="652" y="388" font-size="11" fill="#5E5A52">技术栈：Blender 5.2 LTS · Cycles GPU · OptiX · RTX 4060</text>
+
+      <rect x="652" y="400" width="144" height="48" fill="#F6F1E7" stroke="#C9BFae"/>
+      <text x="724" y="420" text-anchor="middle" font-size="11" font-weight="700" fill="#1C1B19">白模 / 机位</text>
+      <text x="724" y="436" text-anchor="middle" font-size="10" fill="#5E5A52">比例 / 构图先定</text>
+      <path d="M800 424 H816" stroke="#1C1B19" marker-end="url(#arrow)"/>
+      <rect x="820" y="400" width="144" height="48" fill="#F6F1E7" stroke="#C9BFae"/>
+      <text x="892" y="420" text-anchor="middle" font-size="11" font-weight="700" fill="#1C1B19">LookDev / 材质</text>
+      <text x="892" y="436" text-anchor="middle" font-size="10" fill="#5E5A52">PBR / 贴图 / 旧化</text>
+      <path d="M968 424 H984" stroke="#1C1B19" marker-end="url(#arrow)"/>
+      <rect x="988" y="400" width="144" height="48" fill="#F6F1E7" stroke="#C9BFae"/>
+      <text x="1060" y="420" text-anchor="middle" font-size="11" font-weight="700" fill="#1C1B19">布光 / 渲染</text>
+      <text x="1060" y="436" text-anchor="middle" font-size="10" fill="#5E5A52">层次 / 氛围 / passes</text>
+
+      <text x="652" y="472" font-family="'JetBrains Mono','Consolas',monospace" font-size="10" fill="#B23A2B">DELIVERABLE</text>
+      <text x="652" y="490" font-size="11" fill="#3F3B35">.blend 工程 · 可编辑资产 · 分层渲染 passes</text>
+      <text x="652" y="507" font-size="11" fill="#3F3B35">同机位对照 · 材质特写 · 灯光分层 · 交付清单</text>
+      <text x="652" y="528" font-size="11" fill="#4E5D49">适合：需要继续修改、进入美术管线、输出高清静帧或镜头。</text>
+      <text x="652" y="548" font-size="11" fill="#8E2E22">错配：只做网页实时展示、要求秒开与低门槛分享时。</text>
+    </g>
+
+    <!-- failure panel -->
+    <rect x="48" y="590" width="1104" height="182" fill="#FBF7EF" stroke="#2A2824" stroke-width="1.4"/>
+    <rect x="48" y="590" width="6" height="182" fill="#B23A2B"/>
+
+    <!-- tools icon -->
+    <g stroke="#2A2824" stroke-width="1.2">
+      <g transform="rotate(-38 138 668)">
+        <rect x="134" y="636" width="8" height="70" fill="#C49A4A"/>
+        <rect x="108" y="626" width="60" height="16" fill="#5E5A52"/>
+        <path d="M108 634 L96 620 L112 626 Z" fill="#5E5A52"/>
+      </g>
+      <g transform="rotate(38 138 668)">
+        <rect x="130" y="622" width="16" height="36" rx="4" fill="#B23A2B"/>
+        <rect x="136" y="658" width="4" height="48" fill="#8A8175"/>
+        <path d="M136 706 L140 706 L138 716 Z" fill="#8A8175"/>
+      </g>
+    </g>
+    <text x="138" y="752" text-anchor="middle" font-family="'JetBrains Mono','Consolas',monospace" font-size="9" fill="#8A8175">TOOL ≠ ROUTE</text>
+
+    <line x1="228" y1="608" x2="228" y2="754" stroke="#D8CDBD"/>
+
+    <text x="248" y="628" font-size="19" font-weight="700" fill="#1C1B19">真正昂贵的错误，不是「做不出来」</text>
+    <text x="248" y="656" font-size="14" font-weight="700" fill="#B23A2B">而是做出来了，交付物却不是你要的。</text>
+    <text x="248" y="686" font-size="12" fill="#3F3B35">锤子也能把螺丝敲进去，甚至真的能固定住。然后你要花十倍时间把它拆下来，</text>
+    <text x="248" y="706" font-size="12" fill="#3F3B35">还会在木头上留下一个再也补不回去的洞。</text>
+    <text x="248" y="738" font-size="11.5" fill="#5E5A52">局部验证能证明「这条路能跑」，不能证明「这条路线值得继续跑」。</text>
+
+    <rect x="764" y="608" width="368" height="146" fill="#F6F1E7" stroke="#B23A2B" stroke-width="1" stroke-dasharray="4 3"/>
+    <text x="784" y="630" font-family="'JetBrains Mono','Consolas',monospace" font-size="10" fill="#B23A2B">ROUTE LOCK / 技术路径依赖</text>
+    <line x1="792" y1="652" x2="792" y2="730" stroke="#B23A2B" stroke-width="1"/>
+    <g fill="#B23A2B">
+      <circle cx="792" cy="652" r="3"/>
+      <circle cx="792" cy="678" r="3"/>
+      <circle cx="792" cy="704" r="3"/>
+      <circle cx="792" cy="730" r="3"/>
+    </g>
+    <text x="808" y="656" font-size="11.5" fill="#3F3B35">选一条「能跑」的路线</text>
+    <text x="808" y="682" font-size="11.5" fill="#3F3B35">局部测试全部通过</text>
+    <text x="808" y="708" font-size="11.5" fill="#3F3B35">继续修补、继续加功能</text>
+    <text x="808" y="734" font-size="11.5" font-weight="700" fill="#8E2E22">交付形态与需求不匹配</text>
+
+    <text x="48" y="800" font-size="12" fill="#5E5A52">路线选择发生在第一次生成之前；验收标准应当写在路线选择之前。</text>
+    <text x="1152" y="800" text-anchor="end" font-family="'JetBrains Mono','Consolas',monospace" font-size="10" fill="#8A8175">WORKFLOW DECOMPOSITION / 03</text>
+  </g>
+</svg>

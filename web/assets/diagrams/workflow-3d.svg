@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">三维制作工作流拆解</title>
+  <desc id="desc">从概念设计到后期交付的八个阶段，标注每个阶段的主要执行者与验收检查点。</desc>
+  <rect width="1200" height="720" fill="#F6F1E7"/>
+  <rect x="24" y="24" width="1152" height="672" fill="none" stroke="#D8CDBD"/>
+  <g font-family="'Noto Sans SC','Microsoft YaHei',sans-serif">
+    <text x="48" y="74" font-size="28" font-weight="700" fill="#1C1B19">三维制作：一条可以被拆解、分配、验收的生产线</text>
+    <text x="48" y="101" font-size="13" fill="#5E5A52">以专业 CG 流程为骨架，而不是以某个软件的功能菜单为骨架。</text>
+    <text x="1152" y="74" text-anchor="end" font-family="'JetBrains Mono','Consolas',monospace" font-size="11" fill="#3E5C6B">PLATE 01 / 3D WORKFLOW</text>
+    <text x="1152" y="101" text-anchor="end" font-family="'JetBrains Mono','Consolas',monospace" font-size="11" fill="#8A8175">RITTEN POEMS · 2026.10</text>
+
+    <!-- stage boxes -->
+    <g>
+      <!-- 1 -->
+      <rect x="46" y="150" width="120" height="136" fill="#FBF7EF" stroke="#2A2824" stroke-width="1.4"/>
+      <rect x="46" y="150" width="120" height="5" fill="#B23A2B"/>
+      <text x="58" y="176" font-family="'JetBrains Mono','Consolas',monospace" font-size="10" fill="#B23A2B">01</text>
+      <text x="58" y="199" font-size="15" font-weight="700" fill="#1C1B19">概念设计</text>
+      <text x="58" y="222" font-size="11" fill="#5E5A52">风格 / 参考 / 交付物</text>
+      <text x="58" y="240" font-size="11" fill="#5E5A52">定义</text>
+      <rect x="58" y="254" width="48" height="20" fill="#F3E2DE" stroke="#B23A2B" stroke-width="0.8"/>
+      <text x="82" y="268" text-anchor="middle" font-size="10" fill="#8E2E22">人主导</text>
+
+      <!-- 2 -->
+      <rect x="190" y="150" width="120" height="136" fill="#FBF7EF" stroke="#2A2824" stroke-width="1.4"/>
+      <rect x="190" y="150" width="120" height="5" fill="#6F7F6A"/>
+      <text x="202" y="176" font-family="'JetBrains Mono','Consolas',monospace" font-size="10" fill="#6F7F6A">02</text>
+      <text x="202" y="199" font-size="15" font-weight="700" fill="#1C1B19">概念图</text>
+      <text x="202" y="222" font-size="11" fill="#5E5A52">造型 / 比例 / 色彩</text>
+      <text x="202" y="240" font-size="11" fill="#5E5A52">视觉语言</text>
+      <rect x="202" y="254" width="60" height="20" fill="#E8EDE4" stroke="#6F7F6A" stroke-width="0.8"/>
+      <text x="232" y="268" text-anchor="middle" font-size="10" fill="#4E5D49">AI + 人</text>
+
+      <!-- 3 -->
+      <rect x="334" y="150" width="120" height="136" fill="#FBF7EF" stroke="#2A2824" stroke-width="1.4"/>
+      <rect x="334" y="150" width="120" height="5" fill="#6F7F6A"/>
+      <text x="346" y="176" font-family="'JetBrains Mono','Consolas',monospace" font-size="10" fill="#6F7F6A">03</text>
+      <text x="346" y="199" font-size="15" font-weight="700" fill="#1C1B19">资产拆解</text>
+      <text x="346" y="222" font-size="11" fill="#5E5A52">场景清单 / 组件</text>
+      <text x="346" y="240" font-size="11" fill="#5E5A52">优先级</text>
+      <rect x="346" y="254" width="60" height="20" fill="#E8EDE4" stroke="#6F7F6A" stroke-width="0.8"/>
+      <text x="376" y="268" text-anchor="middle" font-size="10" fill="#4E5D49">AI + 人</text>
+
+      <!-- 4 -->
+      <rect x="478" y="150" width="120" height="136" fill="#FBF7EF" stroke="#2A2824" stroke-width="1.4"/>
+      <rect x="478" y="150" width="120" height="5" fill="#3E5C6B"/>
+      <text x="490" y="176" font-family="'JetBrains Mono','Consolas',monospace" font-size="10" fill="#3E5C6B">04</text>
+      <text x="490" y="199" font-size="15" font-weight="700" fill="#1C1B19">建模 / Blockout</text>
+      <text x="490" y="222" font-size="11" fill="#5E5A52">白模 / 比例 / 机位</text>
+      <text x="490" y="240" font-size="11" fill="#5E5A52">空间关系</text>
+      <rect x="490" y="254" width="38" height="20" fill="#E2EBEF" stroke="#3E5C6B" stroke-width="0.8"/>
+      <text x="509" y="268" text-anchor="middle" font-size="10" fill="#2E4A58">AI</text>
+
+      <!-- 5 -->
+      <rect x="622" y="150" width="120" height="136" fill="#FBF7EF" stroke="#2A2824" stroke-width="1.4"/>
+      <rect x="622" y="150" width="120" height="5" fill="#3E5C6B"/>
+      <text x="634" y="176" font-family="'JetBrains Mono','Consolas',monospace" font-size="10" fill="#3E5C6B">05</text>
+      <text x="634" y="199" font-size="15" font-weight="700" fill="#1C1B19">细节与材质</text>
+      <text x="634" y="222" font-size="11" fill="#5E5A52">雕刻 / 拓扑 / UV</text>
+      <text x="634" y="240" font-size="11" fill="#5E5A52">贴图 / LookDev</text>
+      <rect x="634" y="254" width="38" height="20" fill="#E2EBEF" stroke="#3E5C6B" stroke-width="0.8"/>
+      <text x="653" y="268" text-anchor="middle" font-size="10" fill="#2E4A58">AI</text>
+
+      <!-- 6 -->
+      <rect x="766" y="150" width="120" height="136" fill="#FBF7EF" stroke="#2A2824" stroke-width="1.4"/>
+      <rect x="766" y="150" width="120" height="5" fill="#3E5C6B"/>
+      <text x="778" y="176" font-family="'JetBrains Mono','Consolas',monospace" font-size="10" fill="#3E5C6B">06</text>
+      <text x="778" y="199" font-size="15" font-weight="700" fill="#1C1B19">场景组装</text>
+      <text x="778" y="222" font-size="11" fill="#5E5A52">材质 / 环境 / 相机</text>
+      <text x="778" y="240" font-size="11" fill="#5E5A52">构图</text>
+      <rect x="778" y="254" width="38" height="20" fill="#E2EBEF" stroke="#3E5C6B" stroke-width="0.8"/>
+      <text x="797" y="268" text-anchor="middle" font-size="10" fill="#2E4A58">AI</text>
+
+      <!-- 7 -->
+      <rect x="910" y="150" width="120" height="136" fill="#FBF7EF" stroke="#2A2824" stroke-width="1.4"/>
+      <rect x="910" y="150" width="120" height="5" fill="#6F7F6A"/>
+      <text x="922" y="176" font-family="'JetBrains Mono','Consolas',monospace" font-size="10" fill="#6F7F6A">07</text>
+      <text x="922" y="199" font-size="15" font-weight="700" fill="#1C1B19">灯光 / 渲染</text>
+      <text x="922" y="222" font-size="11" fill="#5E5A52">光照 / 氛围 / 层次</text>
+      <text x="922" y="240" font-size="11" fill="#5E5A52">最终输出</text>
+      <rect x="922" y="254" width="60" height="20" fill="#E8EDE4" stroke="#6F7F6A" stroke-width="0.8"/>
+      <text x="952" y="268" text-anchor="middle" font-size="10" fill="#4E5D49">AI + 人</text>
+
+      <!-- 8 -->
+      <rect x="1054" y="150" width="120" height="136" fill="#FBF7EF" stroke="#2A2824" stroke-width="1.4"/>
+      <rect x="1054" y="150" width="120" height="5" fill="#B23A2B"/>
+      <text x="1066" y="176" font-family="'JetBrains Mono','Consolas',monospace" font-size="10" fill="#B23A2B">08</text>
+      <text x="1066" y="199" font-size="15" font-weight="700" fill="#1C1B19">后期 / 交付</text>
+      <text x="1066" y="222" font-size="11" fill="#5E5A52">调色 / 合成 / 文件</text>
+      <text x="1066" y="240" font-size="11" fill="#5E5A52">交付清单</text>
+      <rect x="1066" y="254" width="48" height="20" fill="#F3E2DE" stroke="#B23A2B" stroke-width="0.8"/>
+      <text x="1090" y="268" text-anchor="middle" font-size="10" fill="#8E2E22">人主导</text>
+
+      <!-- arrows -->
+      <g stroke="#3B3832" stroke-width="1.3" fill="none">
+        <path d="M166 218 L184 218" marker-end="url(#arrow)"/>
+        <path d="M310 218 L328 218" marker-end="url(#arrow)"/>
+        <path d="M454 218 L472 218" marker-end="url(#arrow)"/>
+        <path d="M598 218 L616 218" marker-end="url(#arrow)"/>
+        <path d="M742 218 L760 218" marker-end="url(#arrow)"/>
+        <path d="M886 218 L904 218" marker-end="url(#arrow)"/>
+        <path d="M1030 218 L1048 218" marker-end="url(#arrow)"/>
+      </g>
+    </g>
+
+    <!-- gates -->
+    <line x1="58" y1="326" x2="1114" y2="326" stroke="#C9B99E" stroke-width="1" stroke-dasharray="3 4"/>
+    <g font-size="10" fill="#6E5A33">
+      <g transform="translate(106,326)"><path d="M0,-9 L9,0 L0,9 L-9,0 Z" fill="#C49A4A"/><text x="0" y="30" text-anchor="middle">方向确认</text></g>
+      <g transform="translate(394,326)"><path d="M0,-9 L9,0 L0,9 L-9,0 Z" fill="#C49A4A"/><text x="0" y="30" text-anchor="middle">范围锁定</text></g>
+      <g transform="translate(538,326)"><path d="M0,-9 L9,0 L0,9 L-9,0 Z" fill="#C49A4A"/><text x="0" y="30" text-anchor="middle">白模校形</text></g>
+      <g transform="translate(826,326)"><path d="M0,-9 L9,0 L0,9 L-9,0 Z" fill="#C49A4A"/><text x="0" y="30" text-anchor="middle">同机位对照</text></g>
+      <g transform="translate(970,326)"><path d="M0,-9 L9,0 L0,9 L-9,0 Z" fill="#C49A4A"/><text x="0" y="30" text-anchor="middle">光影验收</text></g>
+      <g transform="translate(1114,326)"><path d="M0,-9 L9,0 L0,9 L-9,0 Z" fill="#C49A4A"/><text x="0" y="30" text-anchor="middle">交付清单</text></g>
+    </g>
+
+    <!-- loop back -->
+    <path d="M1114 392 L1114 416 L394 416 L394 392" fill="none" stroke="#B23A2B" stroke-width="1.4" stroke-dasharray="5 5" marker-end="url(#arrowRed)"/>
+    <rect x="610" y="402" width="286" height="28" fill="#F6F1E7"/>
+    <text x="753" y="421" text-anchor="middle" font-size="11" fill="#8E2E22">不合格：回到拆解 / 建模，而不是继续加提示词</text>
+
+    <!-- bottom notes -->
+    <g>
+      <line x1="48" y1="474" x2="1152" y2="474" stroke="#D8CDBD"/>
+      <text x="48" y="504" font-family="'JetBrains Mono','Consolas',monospace" font-size="10" fill="#3E5C6B">HUMAN</text>
+      <text x="48" y="527" font-size="12" fill="#1C1B19">定义交付物、选择参考、确认方向、</text>
+      <text x="48" y="546" font-size="12" fill="#1C1B19">在关键节点比较路线、做最终验收。</text>
+
+      <text x="424" y="504" font-family="'JetBrains Mono','Consolas',monospace" font-size="10" fill="#3E5C6B">AI</text>
+      <text x="424" y="527" font-size="12" fill="#1C1B19">建模、材质、组装、渲染、后期；</text>
+      <text x="424" y="546" font-size="12" fill="#1C1B19">同时生成可复查的日志、截图和版本。</text>
+
+      <text x="800" y="504" font-family="'JetBrains Mono','Consolas',monospace" font-size="10" fill="#B23A2B">GATE</text>
+      <text x="800" y="527" font-size="12" fill="#1C1B19">每个检查点都要有可观察的证据；</text>
+      <text x="800" y="546" font-size="12" fill="#1C1B19">“进程成功”不等于“画面合格”。</text>
+
+      <text x="48" y="604" font-size="11" fill="#8A8175">说明：流程不是唯一答案。不同团队会在资产拆解、LookDev、灯光与后期之间来回迭代；这张图给出的是可讨论的骨架，而不是一条必须照抄的流水线。</text>
+      <text x="48" y="650" font-size="11" fill="#8A8175">同一套骨架可以映射到 Three.js、Blender 或混合路线。工具会变，输入、产出与验收关系不变。</text>
+    </g>
+  </g>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#3B3832"/>
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#B23A2B"/>
+    </marker>
+  </defs>
+</svg>

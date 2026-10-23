@@ -39,6 +39,7 @@ python dev-server.py
 | `web/works.html` | 内容与作品：账号数据、视频片单、内容方向、创作方法 |
 | `web/tech.html` | 技术与研究：Varve、视频自动化工作流、研究方向 |
 | `web/notes.html` | 思考与手记：观点短文、审美来源与长文入口 |
+| `web/notes/ai-beacon.html` | 手记长文《AI 是这个时代的烽火戏诸侯》 |
 | `web/notes/workflow-decomposition.html` | 手记长文《拆解专业工作流程，就是你所需要的一切》 |
 | `web/contact.html` | 联系：静态报名表（生成预写邮件）、邮箱与微信 |
 | `web/css/site.css` | 全局设计系统与内页样式 |
@@ -97,7 +98,7 @@ python dev-server.py
 - **交互**：改 `web/js/site.js`；所有功能在禁用 JS 时仍应能读到内容。
 - **加一条视频**：在 `works.html` 的 `.shots` 里复制一个 `<a class="shot">`，填真实链接、主题、标题与播放量。
 - **加一门课 / 一条服务线**：在 `teach.html` 复制一个 `.offer__item`，保持真实信息与可展开结构。
-- **加一篇文章**：短文在 `notes.html` 的 `.notes-grid` 复制一张 `.note-card`；长文参考 `web/notes/workflow-decomposition.html`，在 `notes.html` 增加一张 `.feature-note` 入口，并从首页手记列表链过去。长文要同时更新 `font-build/chars.txt` 并重建字体子集。
+- **加一篇文章**：短文在 `notes.html` 的 `.notes-grid` 复制一张 `.note-card`；长文参考 `web/notes/ai-beacon.html` 或 `web/notes/workflow-decomposition.html`，在 `notes.html` 增加一张 `.feature-note` 入口，并从首页手记列表链过去。长文要同时更新 `font-build/chars.txt` 并重建字体子集。
 
 ### 改了文案之后：重建字体子集
 

@@ -29,6 +29,7 @@
   font-family:var(--mono);font-size:.58rem;line-height:1.6;letter-spacing:.12em;text-transform:uppercase;
   color:rgba(250,247,239,.92);
 }
+.feature-note__meta .pill{border-color:rgba(250,247,239,.3);color:rgba(250,247,239,.7)}
 .feature-note__meta .pill--live{border-color:var(--seal-bright);color:var(--seal-bright)}
 .feature-note__meta .pill--live::before{background:var(--seal-bright)}
 .feature-note__meta span:last-child{margin-left:auto}
@@ -74,6 +75,42 @@
 .feature-note:hover .feature-note__plate{
   transform:rotate(0) translateY(-4px);
   box-shadow:0 32px 56px -34px rgba(0,0,0,.9);
+}
+.feature-note__plate--quote{background:var(--bone)}
+.quote-plate{
+  position:relative;isolation:isolate;overflow:hidden;
+  display:flex;flex-direction:column;justify-content:space-between;gap:1.6rem;
+  min-height:clamp(12rem,24vw,17rem);
+  padding:clamp(1rem,2vw,1.5rem);
+  background:var(--bone);color:var(--ink);
+}
+.quote-plate::after{
+  content:"";position:absolute;right:-24%;bottom:-38%;z-index:-1;
+  width:64%;aspect-ratio:1;border-radius:50%;background:var(--seal);opacity:.12;
+}
+.quote-plate__mark{
+  font-family:var(--latin);font-size:clamp(4rem,8vw,6rem);line-height:.55;
+  color:var(--seal);opacity:.55;
+}
+.quote-plate__seal{
+  position:absolute;right:clamp(.8rem,1.6vw,1.2rem);top:clamp(.8rem,1.6vw,1.2rem);
+  display:grid;place-items:center;width:2.1rem;height:2.1rem;
+  background-color:var(--seal);background-image:var(--grain);background-blend-mode:soft-light;
+  color:var(--bone);font-family:var(--serif);font-weight:600;font-size:.8rem;
+  transform:rotate(-4deg);
+}
+.quote-plate__cn{
+  margin:0;font-family:var(--serif);font-weight:600;
+  font-size:clamp(1.1rem,1.8vw,1.4rem);line-height:1.8;letter-spacing:-.02em;
+}
+.quote-plate__en{
+  margin:.35rem 0 0;font-family:var(--latin);font-style:italic;
+  font-size:.82rem;line-height:1.5;color:var(--seal);
+}
+.quote-plate__foot{
+  display:flex;justify-content:space-between;gap:1rem;
+  padding-top:.6rem;border-top:1px solid var(--line);
+  font-family:var(--mono);font-size:.5rem;line-height:1.6;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);
 }
 
 /* ---------- article hero ---------- */
@@ -234,7 +271,7 @@
   font-size:clamp(1.24rem,2.15vw,1.62rem);line-height:1.8;letter-spacing:-.015em;
   color:var(--ink);
 }
-.longform-pull p{margin:0}
+.longform-pull p{margin:0;text-wrap:balance}
 .longform-pull p strong{font-weight:600}
 .longform-pull--ink{
   position:relative;max-width:none;isolation:isolate;overflow:hidden;
